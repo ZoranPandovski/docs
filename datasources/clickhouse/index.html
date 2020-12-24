@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://zoranpandovski.github.io/docs/datasources/clickhouse/">
+      
       
       <link rel="shortcut icon" href="../../assets/mdb_logo.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
@@ -72,7 +74,7 @@
   
   <header class="md-header" data-md-component="header">
     <nav class="md-header-nav md-grid" aria-label="Header">
-      <a href="../.." title="MindsDB Documentation" class="md-header-nav__button md-logo" aria-label="MindsDB Documentation">
+      <a href="https://zoranpandovski.github.io/docs/" title="MindsDB Documentation" class="md-header-nav__button md-logo" aria-label="MindsDB Documentation">
         
   <img src="../../assets/mdb_logo_w.svg" alt="logo">
 
@@ -162,7 +164,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MindsDB Documentation" class="md-nav__button md-logo" aria-label="MindsDB Documentation">
+    <a href="https://zoranpandovski.github.io/docs/" title="MindsDB Documentation" class="md-nav__button md-logo" aria-label="MindsDB Documentation">
       
   <img src="../../assets/mdb_logo_w.svg" alt="logo">
 
@@ -1326,7 +1328,7 @@
 </ol>
 </li>
 </ol>
-<p><img alt="Connect to ClickHouse" src="/docs/assets/data/clickhouse.gif" /></p>
+<p><img alt="Connect to ClickHouse" src="/assets/data/clickhouse.gif" /></p>
 <h4 id="create-new-datasource">Create new Datasource</h4>
 <ol>
 <li>Click on the <code>NEW DATASOURCE</code> button.</li>
@@ -1338,7 +1340,7 @@
 </ol>
 </li>
 </ol>
-<p><img alt="Create ClickHouse Datasource" src="/docs/assets/data/clickhouse-ds.gif" /></p>
+<p><img alt="Create ClickHouse Datasource" src="/assets/data/clickhouse-ds.gif" /></p>
 <div class="admonition success">
 <p class="admonition-title">That's all <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" title=":tada:" /> <img alt="🏆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f3c6.png" title=":trophy:" />  <img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f4bb.png" title=":computer:" /></p>
 <p>You have succesfully connected to ClickHouse from MindsDB Scout. Next step is to train the <a href="/model/train">Machine Learning model</a>.</p>
@@ -1419,15 +1421,15 @@
 <p><div class="highlight"><pre><span></span><code>python3 -m mindsdb --api=http,mysql --config=config.json
 </code></pre></div>
 The <code>--api</code> parameter specifies the type of API to use in this case HTTP and MySQL. The <code>--config</code> specifies the location of the configuration file.</p>
-<p><img alt="Start MindsDB with config" src="/docs/assets/data/clickhouse-client.gif" /></p>
+<p><img alt="Start MindsDB with config" src="/assets/data/clickhouse-client.gif" /></p>
 <p>If MindsDB is succesfully connected to your ClickHouse database, it will create a new database <code>mindsdb</code> and new table <code>predictors</code>.
 After starting the server, from your clickhouse-client you can run <code>SELECT</code> query from it to make sure integration is succesfull.</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">mindsdb</span><span class="p">.</span><span class="n">predictors</span><span class="p">;</span>
 </code></pre></div>
-<p><img alt="SELECT from MindsDB predictors table" src="/docs/assets/data/clickhouse-select.gif" /></p>
+<p><img alt="SELECT from MindsDB predictors table" src="/assets/data/clickhouse-select.gif" /></p>
 <div class="admonition success">
 <p class="admonition-title">That's all <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" title=":tada:" /> <img alt="🏆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f3c6.png" title=":trophy:" />  <img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f4bb.png" title=":computer:" /></p>
-<p>You have succesfully connected MindsDB Server and ClickHouse. Next step is to <a href="/docs/model/clickhouse">train the Machine Learning model</a>.</p>
+<p>You have succesfully connected MindsDB Server and ClickHouse. Next step is to <a href="/model/clickhouse">train the Machine Learning model</a>.</p>
 </div>
                 
               
