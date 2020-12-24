@@ -14,7 +14,7 @@
     
     
       
-        <title>Official MindsDB Docs - MindsDB Documentation</title>
+        <title>Installing MindsDB - MindsDB Documentation</title>
       
     
     
@@ -58,6 +58,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#installation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +88,7 @@
             </span>
             <span class="md-header-nav__topic md-ellipsis">
               
-                Official MindsDB Docs
+                Installing MindsDB
               
             </span>
           </div>
@@ -144,27 +149,8 @@
     <div class="md-container" data-md-component="container">
       
       
-    
         
       
-
-    <section class="tx-container">
-        <div class="block">
-          <div class="grid1">
-              <a href="/Installing"><div class="grid_div_card"><img src="assets/icons/Explainable.svg" width="146" height="146" alt="" class="grid_div_card_image"><p class="tableheader-copy">Install MindsDB</p><p class="tableheader-copy-copy">MindsDB is an open-source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using SQL queries.</p></div></a>
-            <a href="databases/"><div class="grid_div_card"><img src="assets/icons/Database.svg" width="146" height="146" alt="" class="grid_div_card_image"><p class="tableheader-copy">AutoML in Databases</p><p class="tableheader-copy-copy">Learn how to run Machine Learning models as Tables straight in the most popular databases using SQL. Follow detailed tutorials from install to interpreting results with Explainable AI features.</p></div></a>
-            <a href="tutorials/BasicExample/" class="stretched-link"><div class="grid_div_card"><img src="assets/icons/Python.svg" width="146" height="146" alt="" class="grid_div_card_image"><p class="tableheader-copy">AutoML in Python</p><p class="tableheader-copy-copy">Explore how to create, train and test neural-networks-based Machine Learning models with no complex data science knowledge required. You have options to customize the model or query it in a fully automated way using a single query.</p></div></a>
-          </div>
-
-          <div class="grid1 grid_mt">
-              <a href="scout/Introduction/"><div class="grid_div_card"><img src="assets/icons/GUI.svg" width="146" height="146" alt="" class="grid_div_card_image"><p class="tableheader-copy">AutoML Visualization Toolkit</p><p class="tableheader-copy-copy">Run AutoML models using an intuitive graphical user interface with almost no setup and coding overhead. Easily clean & validate your datasets, train AutoML models and run predictions using cloud-based (or local) server infrastructure. See how the model reached its conclusions with intuitive visualizations of Explainability Features.</p></div></a>
-              <a href="https://apidocs.mindsdb.com/?version=latest"><div class="grid_div_card"><img src="assets/icons/Server.svg" width="146" height="146" alt="" class="grid_div_card_image"><p class="tableheader-copy">AutoML API</p><p class="tableheader-copy-copy">Need Machine Learning in your favourite programming language? No problem. MindsDB Server allows you to leverage all AutoML and explainability capabilities of MindsDB Stack using powerful REST API's.</p></div></a>
-              <a href="server/SDKs/"><div class="grid_div_card"><img src="assets/icons/sdk.svg" width="146" height="146" alt="" class="grid_div_card_image"><p class="tableheader-copy">AutoML SDK</p><p class="tableheader-copy-copy">Build custom solutions with Machine Learning capabilities with a full control over your data using MindsDB Server. Automatically train neural-networks-based ML models and make predictions from your own software and provide explainable AI features to your business users using JavaScript or Python SDK.</p></div></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
@@ -203,10 +189,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     <label class="md-nav__link" for="nav-1">
       Install
       <span class="md-nav__icon md-icon"></span>
@@ -223,11 +211,59 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="Installing/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Install MindsDB
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="." class="md-nav__link md-nav__link--active">
       Install MindsDB
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-out-using-googlecollab" class="md-nav__link">
+    Try out using GoogleCollab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindsdb-server" class="md-nav__link">
+    MindsDB Server
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -384,6 +420,18 @@
   <li class="md-nav__item">
     <a href="datasources/local/" class="md-nav__link">
       Local dataset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="datasources/snowflake/" class="md-nav__link">
+      Snowflake
     </a>
   </li>
 
@@ -1171,9 +1219,111 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-out-using-googlecollab" class="md-nav__link">
+    Try out using GoogleCollab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mindsdb-server" class="md-nav__link">
+    MindsDB Server
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mindsdb/mindsdb/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Install MindsDB</h1>
+                
+                <p>There are a few options to install MindsDB on different operating systems. To find the one that works the best for you, check out the below links.</p>
+<h2 id="installation">Installation</h2>
+<div class="tabbed-set" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Docker</label><div class="tabbed-content">
+<div class="admonition info">
+<p class="admonition-title">Installation</p>
+<p>Follow the <a href="/installation/docker">Docker installation</a> instructions.</p>
+</div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Windows</label><div class="tabbed-content">
+<div class="admonition info">
+<p class="admonition-title">Installation</p>
+<p>Follow the <a href="/installation/Windows">Windows installation</a> instructions.</p>
+</div>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Linux</label><div class="tabbed-content">
+<div class="admonition info">
+<p class="admonition-title">Installation</p>
+<p>Follow the <a href="/installation/Linux">Linux installation</a> instructions.</p>
+</div>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">macOS</label><div class="tabbed-content">
+<div class="admonition info">
+<p class="admonition-title">Installation</p>
+<p>Follow the <a href="/installation/MacOS">macOS installation</a> instructions.</p>
+</div>
+</div>
+<input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">Source</label><div class="tabbed-content">
+<div class="admonition info">
+<p class="admonition-title">Installation</p>
+<p>Follow the from <a href="/installation/source">source installation</a> instructions.</p>
+</div>
+</div>
+</div>
+<h2 id="try-out-using-googlecollab">Try out using GoogleCollab</h2>
+<p>Checkout <a href="https://colab.research.google.com/drive/1qsIkMeAQFE-MOEANd1c6KMyT44OnycSb"><img alt="Google Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="MindsDB" /></a> this example on GoogleCollab.</p>
+<h2 id="mindsdb-server">MindsDB Server</h2>
+<p>After succesfull installation MindsDB Server can be started by running:</p>
+<div class="highlight"><pre><span></span><code>python -m mindsdb
+</code></pre></div>
+<p>You should see a similar message to:</p>
+<div class="highlight"><pre><span></span><code>GUI should be available by http://127.0.0.1:47334/index.html
+Start on 127.0.0.1:47334
+Serving on http://127.0.0.1:47334
+</code></pre></div>
+<ul>
+<li>To access MindsDB APIs visit <code>http://127.0.0.1:47334/api</code>.</li>
+<li>To access MindsDB Scout visit <code>http://127.0.0.1:47334/</code>.</li>
+</ul>
+                
+                  
+                
               
               
                 
@@ -1184,6 +1334,8 @@
           </div>
         </div>
       </main>
+      
+        
       
     </div>
     

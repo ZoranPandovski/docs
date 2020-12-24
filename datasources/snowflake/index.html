@@ -14,7 +14,7 @@
     
     
       
-        <title>Data sources - MindsDB Documentation</title>
+        <title>Snowflake - MindsDB Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mindsdb-data-source" class="md-skip">
+        <a href="#connect-to-snowflake-data-warehouse" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
             </span>
             <span class="md-header-nav__topic md-ellipsis">
               
-                Data sources
+                Snowflake
               
             </span>
           </div>
@@ -286,10 +286,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     <label class="md-nav__link" for="nav-2">
       Connect your data
       <span class="md-nav__icon md-icon"></span>
@@ -308,7 +310,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../datasources/mysql/" class="md-nav__link">
+    <a href="../mysql/" class="md-nav__link">
       MySQL
     </a>
   </li>
@@ -320,7 +322,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../datasources/postgresql/" class="md-nav__link">
+    <a href="../postgresql/" class="md-nav__link">
       PostgreSQL
     </a>
   </li>
@@ -332,7 +334,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../datasources/mariadb/" class="md-nav__link">
+    <a href="../mariadb/" class="md-nav__link">
       MariaDB
     </a>
   </li>
@@ -344,7 +346,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../datasources/clickhouse/" class="md-nav__link">
+    <a href="../clickhouse/" class="md-nav__link">
       ClickHouse
     </a>
   </li>
@@ -356,7 +358,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../datasources/remote/" class="md-nav__link">
+    <a href="../remote/" class="md-nav__link">
       Remote URL
     </a>
   </li>
@@ -368,7 +370,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../datasources/local/" class="md-nav__link">
+    <a href="../local/" class="md-nav__link">
       Local dataset
     </a>
   </li>
@@ -378,11 +380,56 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../datasources/snowflake/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Snowflake
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Snowflake
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-snowflake" class="md-nav__link">
+    Connect to Snowflake
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-new-datasource" class="md-nav__link">
+    Create new Datasource
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -640,12 +687,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
     <label class="md-nav__link" for="nav-6">
       Use cases and examples
       <span class="md-nav__icon md-icon"></span>
@@ -662,12 +707,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1" checked>
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1" >
     <label class="md-nav__link" for="nav-6-1">
       Python native
       <span class="md-nav__icon md-icon"></span>
@@ -768,86 +811,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Data sources
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../features/DataSources/" class="md-nav__link">
       Data sources
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#mindsdb-data-source" class="md-nav__link">
-    MindsDB data source:
-  </a>
-  
-    <nav class="md-nav" aria-label="MindsDB data source:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fileds" class="md-nav__link">
-    FileDS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#s3ds" class="md-nav__link">
-    S3DS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mysqlds" class="md-nav__link">
-    MySqlDS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#postgresds" class="md-nav__link">
-    PostgresDS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clickhouseds" class="md-nav__link">
-    ClickhouseDS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1255,6 +1223,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1263,50 +1233,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mindsdb-data-source" class="md-nav__link">
-    MindsDB data source:
-  </a>
-  
-    <nav class="md-nav" aria-label="MindsDB data source:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fileds" class="md-nav__link">
-    FileDS
+  <a href="#connect-to-snowflake" class="md-nav__link">
+    Connect to Snowflake
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#s3ds" class="md-nav__link">
-    S3DS
+      
+        <li class="md-nav__item">
+  <a href="#create-new-datasource" class="md-nav__link">
+    Create new Datasource
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mysqlds" class="md-nav__link">
-    MySqlDS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#postgresds" class="md-nav__link">
-    PostgresDS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clickhouseds" class="md-nav__link">
-    ClickhouseDS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1322,117 +1258,49 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mindsdb/mindsdb/edit/master/docs/features/DataSources.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mindsdb/mindsdb/edit/master/docs/datasources/snowflake.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Data sources</h1>
-                
-                <p>Our goal is to make it very simple to ingest and prepare data that can be feed into MindsDB as <strong>DataSources</strong>. Here are the basics:</p>
-<p>mindsdb.learn <strong>from_data</strong> argument can be any of the following:</p>
-<ul>
-<li><strong>file</strong>: can be a path in the local system, stringio object or a url to a file, supported types are (csv, json, xlsx, xls).</li>
-<li><strong>data frame</strong>: A <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html">pandas DataFrame</a>, pandas is one of the most useful data preparation libraries out there, so it makes sense that we support this.</li>
-<li><strong>MindsDB data source</strong>: MindsDB has a special class for datasources which lends itself for simple data ingestion and preparation, as well as to combine various datasources to learn from.</li>
-</ul>
-<p><em>Note: By default, only the FileDS data source is available, to make sure the other data sources work, install mindsdb via <code>pip install mindsdb[extra_data_sources]</code>, or replace <code>mindsdb</code> to <code>mindsdb[extra_data_sources]</code> in whatever install instructions are given for your platform</em></p>
-<h2 id="mindsdb-data-source">MindsDB data source:</h2>
-<p>MindsDB datasource is an enriched version of a pandas dataframe so all methods in the pandas dataframe also apply to MindsDB,
-However, the DataSource class provides a way to implement data loading transformations and cleaning of data.</p>
-<p>Some special implementations of datasources that already do cleaning and various tasks:</p>
-<p>You can learn about them in <a href="https://github.com/mindsdb/mindsdb_native/tree/stable/mindsdb_native/libs/data_sources">mindsdb repository</a>.</p>
-<h3 id="fileds">FileDS</h3>
-<p>An important one is the one MindsDB uses to work with files.</p>
-<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">mindsdb</span> <span class="kn">import</span> <span class="n">FileDS</span>
-
-<span class="n">ds</span> <span class="o">=</span> <span class="n">FileDS</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">clean_rows</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">custom_parser</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
-
-
-<span class="c1"># Now you can pass this DataSource to MindsDB</span>
-<span class="n">mdb</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span>
-    <span class="n">from_data</span><span class="o">=</span><span class="n">ds</span><span class="p">,</span>
-    <span class="n">predict</span><span class="o">=</span><span class="s1">&#39;&lt;what column you want to predict&gt;&#39;</span><span class="p">,</span> <span class="c1"># the column we want to learn to predict given all the data in the file</span>
-    <span class="n">model_name</span><span class="o">=</span><span class="s1">&#39;&lt;the name you want to give to this model&gt;&#39;</span> <span class="c1"># the name of this model</span>
-<span class="p">)</span>
-</code></pre></div>
-FileDS arguments are:</p>
-<ul>
-<li><strong><em>file</em></strong> can be a path in the local system, stringio object or a url to a file, supported types are (csv, json, xlsx, xls).</li>
-<li><strong><em>clean_header</em></strong> (default=True) clean column names, so that they don't have special characters or white spaces.</li>
-<li><strong><em>clean_rows</em></strong> (default=True) Goes row by row making sure that nulls are nulls and that no corrupt data exists in them, it also cleans empty rows</li>
-<li><strong><em>custom_parser</em></strong> (default=None) special function to extract the actual table structure from the file in case you need special transformations.</li>
-</ul>
-<h3 id="s3ds">S3DS</h3>
-<p>Use an <a href="https://aws.amazon.com/s3/">s3</a> object as the input.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">mindsdb</span> <span class="kn">import</span> <span class="n">Predictor</span><span class="p">,</span> <span class="n">S3DS</span>
-
-<span class="n">s3_ds</span> <span class="o">=</span> <span class="n">S3DS</span><span class="p">(</span><span class="n">bucket_name</span><span class="o">=</span><span class="s1">&#39;mindsdb-example-data&#39;</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="s1">&#39;home_rentals.csv&#39;</span><span class="p">)</span><span class="err">`</span>
-
-<span class="n">Predictor</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">from_data</span><span class="o">=</span><span class="n">s3_ds</span><span class="p">,</span> <span class="n">to_predict</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">)</span>
-</code></pre></div>
-<p>This data source also takes the optional initialization/constructor arguments:</p>
-<ul>
-<li>access_key -- The AWS access key [string]</li>
-<li>secret_key -- The AWS secret key [string]</li>
-<li>use_default_credentails -- Whether or not to use the default credentials on your machine (e.g. the credentials inside <code>~/.aws</code> or the role of the machine), defaults to <code>False</code> [boolean]</li>
-</ul>
-<h3 id="mysqlds">MySqlDS</h3>
-<p>Used to select data from <a href="https://www.mysql.com/">MySQL</a> or <a href="https://mariadb.org/">MariaDB</a>.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">mindsdb</span> <span class="kn">import</span> <span class="n">Predictor</span><span class="p">,</span> <span class="n">MySqlDS</span>
-
-<span class="n">mysql_ds</span> <span class="o">=</span> <span class="n">MySqlDS</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;SELECT COUNT(*), SUM(spend), SUM(is_click), website FROM advertising_data&quot;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s2">&quot;my_user&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;my very secret password&quot;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s2">&quot;main_db&quot;</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="s1">&#39;advertising_data&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">)</span>
-
-<span class="n">Predictor</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">from_data</span><span class="o">=</span><span class="n">mysql_ds</span><span class="p">,</span> <span class="n">to_predict</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">)</span>
-</code></pre></div>
-<p>This data source also takes the optional initialization/constructor arguments:</p>
-<ul>
-<li>query -- Query which extracts the data, mutually exclusive with <code>table</code> [string]</li>
-<li>host -- The host of the database (e.g. localhost or some ip) [string]</li>
-<li>user -- User for the database [string]</li>
-<li>password -- Password for the user [string]</li>
-<li>database -- Database to use [string]</li>
-<li>port -- Port of the database [integer]</li>
-<li>table -- Table from which to select all the data, mutually exclusive with <code>query</code> [string]</li>
-</ul>
-<h3 id="postgresds">PostgresDS</h3>
-<p>Used to select data from <a href="https://www.postgresql.org/">PostgreSQL</a>.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">mindsdb</span> <span class="kn">import</span> <span class="n">Predictor</span><span class="p">,</span> <span class="n">PostgresDS</span>
-
-<span class="n">pg_ds</span> <span class="o">=</span> <span class="n">PostgresDS</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;SELECT COUNT(*), SUM(spend), SUM(is_click), website FROM advertising_data&quot;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s2">&quot;my_user&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;my very secret password&quot;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s2">&quot;main_db&quot;</span><span class="p">)</span>
-
-<span class="n">Predictor</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">from_data</span><span class="o">=</span><span class="n">pg_ds</span><span class="p">,</span> <span class="n">to_predict</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">)</span>
-</code></pre></div>
-<p>This data source also takes the optional initialization/constructor arguments:</p>
-<ul>
-<li>query -- Query which extracts the data, mutually exclusive with <code>table</code> [string]</li>
-<li>host -- The host of the database (e.g. localhost or some ip) [string]</li>
-<li>user -- User for the database [string]</li>
-<li>password -- Password for the user [string]</li>
-<li>database -- Database to use [string]</li>
-<li>port -- Port of the database [integer]</li>
-<li>table -- Table from which to select all the data, mutually exclusive with <code>query</code> [string]</li>
-</ul>
-<h3 id="clickhouseds">ClickhouseDS</h3>
-<p>Used to select data from <a href="https://clickhouse.tech/">ClickHouse</a>.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">mindsdb</span> <span class="kn">import</span> <span class="n">Predictor</span><span class="p">,</span> <span class="n">ClickhouseDS</span>
-
-<span class="n">ch_ds</span> <span class="o">=</span> <span class="n">ClickhouseDS</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;SELECT COUNT(*), SUM(spend), SUM(is_click), website FROM default.advertising_data&quot;</span><span class="p">,</span>
-                     <span class="n">user</span><span class="o">=</span><span class="s2">&quot;my_user&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;my very secret password&quot;</span><span class="p">)</span>
-
-<span class="n">Predictor</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">from_data</span><span class="o">=</span><span class="n">ch_ds</span><span class="p">,</span> <span class="n">to_predict</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">)</span>
-</code></pre></div>
-<p>This data source also take the optional initialization/constructor arguments:</p>
-<ul>
-<li>query -- Query whith which to extract the data, mutually exclusive with <code>table</code> [string]</li>
-<li>host -- The host of the database (e.g. localhost or some ip) [string]</li>
-<li>user -- User for the database [string]</li>
-<li>password -- Password for the user [string]</li>
-<li>port -- Port of the database [integer]</li>
-<li>table -- Table from which to select all the data, mutually exclusive with <code>query</code> [string]</li>
-</ul>
-                
-                  
+                <h1 id="connect-to-snowflake-data-warehouse">Connect to Snowflake Data Warehouse</h1>
+<p>Connecting MindsDB to Snowflake could be easly done with a few clicks. </p>
+<h4 id="connect-to-snowflake">Connect to Snowflake</h4>
+<ol>
+<li>From the left navigation menu select Database Integration.</li>
+<li>Click on the <code>ADD DATABASE</code> button. </li>
+<li>In the <code>Connect to Database</code> modal:<ol>
+<li>Select Snowflake as Supported Database.</li>
+<li>Add the Database name.</li>
+<li>Add the Hostname.</li>
+<li>Add Port.</li>
+<li>Add Account.</li>
+<li>Add Warehouse.</li>
+<li>Add Schema.</li>
+<li>Add protocol.</li>
+<li>Add User.</li>
+<li>Add Password for the user.</li>
+<li>Click on <code>CONNECT</code>.</li>
+</ol>
+</li>
+</ol>
+<p><img alt="Connect to Snowflake" src="/assets/data/snowflake.gif" /></p>
+<h4 id="create-new-datasource">Create new Datasource</h4>
+<ol>
+<li>Click on the <code>NEW DATASOURCE</code> button.</li>
+<li>In the <code>Datasource from DB integration</code> modal:<ol>
+<li>Add Datasource Name.</li>
+<li>Add Database name.</li>
+<li>Add SELECT Query e.g (SELECT * FROM my_database)</li>
+<li>Click on <code>CREATE</code>.</li>
+</ol>
+</li>
+</ol>
+<p><img alt="Create Snowflake Datasource" src="/assets/data/snowflake-ds.gif" /></p>
+<div class="admonition success">
+<p class="admonition-title">That's all <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" title=":tada:" /> <img alt="🏆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f3c6.png" title=":trophy:" />  <img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f4bb.png" title=":computer:" /></p>
+<p>You have succesfully connected to Snowflake from MindsDB Scout. Next step is to train the <a href="/model/train">Machine Learning model</a>.</p>
+</div>
                 
               
               
