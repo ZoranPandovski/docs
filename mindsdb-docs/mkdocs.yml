@@ -1,0 +1,97 @@
+site_name: MindsDB Documentation
+repo_name: 'mindsdb/mindsdb'
+repo_url: 'https://github.com/mindsdb/mindsdb'
+theme:
+  name: 'material'
+  custom_dir: overrides
+  logo: assets/mdb_logo_w.svg
+  favicon: assets/mdb_logo.png
+plugins:
+    - search:
+        lang: 'en'
+        social:
+          - type: 'github'
+            link: 'https://github.com/mindsdb/mindsdb'
+          - type: 'twitter'
+            link: 'https://twitter.com/mindsdb'
+          - type: 'link'
+            link: 'https://www.mindsdb.com'
+    - redirects:
+        redirect_maps:
+            'installation/Installing.md': 'Installing.md'
+    - table-reader
+
+markdown_extensions:
+  - codehilite
+  - admonition
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.tasklist:
+      custom_checkbox: true
+nav:
+  - Install:
+    - Install MindsDB: Installing.md
+    - Docker: installation/docker.md
+    - Windows: installation/Windows.md
+    - Linux: installation/Linux.md
+    - MacOS:  installation/MacOS.md
+    - From source: installation/source.md
+  - Connect your data:
+    - MySQL: datasources/mysql.md
+    - PostgreSQL: datasources/postgresql.md
+    - MariaDB: datasources/mariadb.md
+    - ClickHouse: datasources/clickhouse.md
+    - Remote URL: datasources/remote.md
+    - Local dataset: datasources/local.md
+  - Train a model:
+    - Create and train from Scout: model/train.md
+    - Train from the Database:
+      - MySQL: model/mysql.md
+      - PostgreSQL: model/postgresql.md
+      - MariaDB: model/mariadb.md
+      - ClickHouse: model/clickhouse.md
+  - Evaluate model quality:
+    - Evaluate from Scout: model/quality.md
+  - Query model:
+    - Query from the Database: 
+      - MySQL: model/query/mysql.md
+      - PostgreSQL: model/query/postgresql.md
+      - MariaDB: model/query/mariadb.md
+      - ClickHouse: model/query/clickhouse.md
+  - Use cases and examples:
+    - Python native:
+      - Starter Example: tutorials/BasicExample.md
+      - Running on Google Colab: GoogleColab.md
+      - Running on Jupyter Notebook: JupyterNotebook.md
+      - Predictor Interface: PredictorInterface.md
+      - Functional Interface: FunctionalInterface.md
+      - Advanced usecases: tutorials/AdvancedExamples.md
+      - Timeseries Data: tutorials/Timeseries.md
+      - Data sources: features/DataSources.md
+      - Configuration Settings: Config.md
+      - MindsDB SDK: server/SDKs.md
+      - Introduction to Lightwood: lightwood/info.md
+      - Predictor API: lightwood/API.md
+      - Comparison with other Libraries: comparisons/ComparsionWithOtherLibraries.md
+      - Use Cases:
+        - High-Tech & Manufacturing:
+          - Predictive Maintenance: tutorials/PredictiveMaintenance.md
+        - Financial Services:
+          - Credit Scoring: tutorials/CreditScoring.md
+        - Retail & Online:
+          - Custiner Lifetime Value Optimization: tutorials/CustomerLifetimeValue.md
+          - Fraud Detection: tutorials/FraudDetection.md
+        - Health Care:
+          - Patient Health: tutorials/PatientHealthOutcomes.md
+          - Medical Diagnosis: tutorials/MedicalDiagnosis.md
+        - Travel:
+          - Hotel Booking Demand: tutorials/HotelBooking.md
+        - Telecomunications:
+          - Customer Churn Reduction: tutorials/ChurnReduction.md
+  - Contribution and Community:
+    - FAQ: FAQ.md
+    - Inside MindsDB: InsideMindsDB.md
+extra_css:
+  - stylesheets/extra.css
