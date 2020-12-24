@@ -8,8 +8,6 @@
       
       
       
-        <link rel="canonical" href="https://zoranpandovski.github.io/docs/model/mysql/">
-      
       
       <link rel="shortcut icon" href="../../assets/mdb_logo.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
@@ -74,7 +72,7 @@
   
   <header class="md-header" data-md-component="header">
     <nav class="md-header-nav md-grid" aria-label="Header">
-      <a href="https://zoranpandovski.github.io/docs/" title="MindsDB Documentation" class="md-header-nav__button md-logo" aria-label="MindsDB Documentation">
+      <a href="../.." title="MindsDB Documentation" class="md-header-nav__button md-logo" aria-label="MindsDB Documentation">
         
   <img src="../../assets/mdb_logo_w.svg" alt="logo">
 
@@ -164,7 +162,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://zoranpandovski.github.io/docs/" title="MindsDB Documentation" class="md-nav__button md-logo" aria-label="MindsDB Documentation">
+    <a href="../.." title="MindsDB Documentation" class="md-nav__button md-logo" aria-label="MindsDB Documentation">
       
   <img src="../../assets/mdb_logo_w.svg" alt="logo">
 
@@ -1282,12 +1280,12 @@
                 
                 
                 <h1 id="train-a-model-from-mysql-database">Train a model from MySQL database</h1>
-<p><img alt="MindsDB-MySQL" src="/assets/databases/mdb-mysql.png" /></p>
+<p><img alt="MindsDB-MySQL" src="/docs/assets/databases/mdb-mysql.png" /></p>
 <h3 id="train-new-model">Train new model</h3>
 <p>To train a new model, you will neeed to <code>INSERT</code> a new record inside the mindsdb.predictors table.</p>
 <div class="admonition question">
 <p class="admonition-title">How to create mindsb.predictors table</p>
-<p>Note that after connecting <a href="datasources/mysql/#mysql-client">MindsDB and MySQL servers</a>, on
+<p>Note that after connecting <a href="/docs/datasources/mysql/#mysql-client">MindsDB and MySQL servers</a>, on
 start, MindsDB server will automaticly create the mindsdb database and add predictors table.</p>
 </div>
 <p>The <code>INSERT</code> query for training new model is quite simple e.g:</p>
@@ -1301,7 +1299,7 @@ start, MindsDB server will automaticly create the mindsdb database and add predi
 <li>select_data_query (string) -- The SELECT query that will ingest the data to train the model.</li>
 <li>training_options (JSON as comma separated string) -- optional value that contains additional training parameters. For a full list of the parameters check the <a href="/PredictorInterface/#learn">PredictorInterface</a>.</li>
 </ul>
-<p><img alt="Train model from mysql client" src="/assets/predictors/mysql-insert.gif" /></p>
+<p><img alt="Train model from mysql client" src="/docs/assets/predictors/mysql-insert.gif" /></p>
 <h3 id="train-new-model-example">Train new model example</h3>
 <p>The following example shows you how to train new model from mysql-client. The table used for training the model is same as <a href="https://github.com/robjhyndman/fpp2-package/blob/15916e4fe827d1b3dcf82785a4ace80107af5ddd/data-raw/usconsumption.csv">Us consumption</a> dataset.</p>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">mindsdb</span><span class="p">.</span><span class="n">predictors</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">predict</span><span class="p">,</span> <span class="n">select_data_query</span><span class="p">,</span><span class="n">training_options</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;airq_predictor1&#39;</span><span class="p">,</span> <span class="s1">&#39;SO2&#39;</span><span class="p">,</span> <span class="s1">&#39;SELECT * FROM default.pollution_measurement&#39;</span><span class="p">,</span> <span class="s1">&#39;{&quot;timeseries_settings&quot;:{&quot;order_by&quot;: [&quot;Measurement date&quot;], &quot;window&quot;:20}}&#39;</span><span class="p">);</span>
@@ -1311,10 +1309,10 @@ start, MindsDB server will automaticly create the mindsdb database and add predi
 <p>To check that the training successfully finished you can <code>SELECT</code> from mindsdb.predictors table and get the training status e.g:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">mindsdb</span><span class="p">.</span><span class="n">predictors</span> <span class="k">WHERE</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&lt;model_name&gt;&#39;</span><span class="p">;</span>
 </code></pre></div>
-<p><img alt="Training model status" src="/assets/predictors/mysql-status.gif" /></p>
+<p><img alt="Training model status" src="/docs/assets/predictors/mysql-status.gif" /></p>
 <div class="admonition success">
 <p class="admonition-title">That's all <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" title=":tada:" /> <img alt="🏆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f3c6.png" title=":trophy:" />  <img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f4bb.png" title=":computer:" /></p>
-<p>You have succesfully trained new model from MySQL database. Next step is to get predictions by <a href="/query/mysql">querying the model</a>.</p>
+<p>You have succesfully trained new model from MySQL database. Next step is to get predictions by <a href="/docs/query/mysql">querying the model</a>.</p>
 </div>
                 
               

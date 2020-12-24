@@ -1,186 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>https://zoranpandovski.github.io/docs/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/installation/docker/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/installation/Windows/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/installation/Linux/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/installation/MacOS/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/installation/source/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/datasources/mysql/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/datasources/postgresql/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/datasources/mariadb/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/datasources/clickhouse/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/datasources/remote/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/datasources/local/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/datasources/snowflake/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/model/train/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/model/mysql/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/model/postgresql/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/model/mariadb/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/model/clickhouse/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/model/quality/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/model/query/mysql/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/model/query/postgresql/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/model/query/mariadb/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/model/query/clickhouse/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/tutorials/BasicExample/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/GoogleColab/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/JupyterNotebook/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/PredictorInterface/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/FunctionalInterface/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/tutorials/AdvancedExamples/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/tutorials/Timeseries/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/features/DataSources/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/Config/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/server/SDKs/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/lightwood/info/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/lightwood/API/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/comparisons/ComparsionWithOtherLibraries/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/tutorials/PredictiveMaintenance/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/tutorials/CreditScoring/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/tutorials/CustomerLifetimeValue/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/tutorials/FraudDetection/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/tutorials/PatientHealthOutcomes/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/tutorials/MedicalDiagnosis/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/tutorials/HotelBooking/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/tutorials/ChurnReduction/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/FAQ/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://zoranpandovski.github.io/docs/InsideMindsDB/</loc>
+     <loc>None</loc>
      <lastmod>2020-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
