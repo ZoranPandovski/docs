@@ -1,11 +1,13 @@
 ---
 id: installing-mindsdb
-title: Installing MindsDB
+title: Getting started
 ---
 
-There are a few options to install MindsDB on different operating systems. To find the one that works the best for you, check out the below links.
+# Getting started
 
 ## Installation
+
+There are a few options to install MindsDB on different operating systems. To find the one that works the best for you, check out the below links.
 
 === "Docker"
 
@@ -33,26 +35,18 @@ There are a few options to install MindsDB on different operating systems. To fi
         Follow the from [source installation](/installation/source) instructions.
 
 
-## Try out using GoogleCollab
+## Tutorials
+* [AiTables in MySQL](/tutorials/mysql)
+* [AiTables in MariaDB](/tutorials/mariadb)
+* [AiTables in PostgreSQL](/tutorials/postgresql)
+* [AiTables in ClickHouse](/tutorials/clickhouse)
 
-Checkout [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg "MindsDB")](https://colab.research.google.com/drive/1qsIkMeAQFE-MOEANd1c6KMyT44OnycSb) this example on GoogleCollab.
+## Contribute to MindsDB
+* [Became a contributor to MindsDB](/contribute)
+* [Join MindsDB community](/community)
 
-
-## MindsDB Server
-
-After succesfull installation MindsDB Server can be started by running:
-
-```
-python -m mindsdb
-```
-
-You should see a similar message to:
-
-```
-GUI should be available by http://127.0.0.1:47334/index.html
-Start on 127.0.0.1:47334
-Serving on http://127.0.0.1:47334
-```
-
-* To access MindsDB APIs visit `http://127.0.0.1:47334/api`.
-* To access MindsDB Scout visit `http://127.0.0.1:47334/`.
+## Useful links
+ * [MindsDB APIs documentation](https://apidocs.mindsdb.com/)
+ * [Get in touch](https://mindsdb.com/contact-us/)
+ * [Book a demo](https://mindsdb.com/book-a-demo)
+ * [MindsDB Benchmarks]()

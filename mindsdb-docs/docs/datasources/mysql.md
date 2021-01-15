@@ -103,7 +103,7 @@ All of the options that should be added to the `config.json` file are:
     * port(default 47335).
 * [x] integrations['default_mysql'] -- This key specifies the integration type in this case `default_mysql`. The required keys are:
     * user(default root) - The MySQL user name.
-    * host(default 127.0.0.1) - Connect to the MySQL server on the given host. 
+    * host(default 127.0.0.1, don't use localhost here) - Connect to the MySQL server on the given host. 
     * password - The password of the MySQL account. 
     * type - Integration type(mariadb, postgresql, mysql, clickhouse, mongodb).
     * port(default 3306) - The TCP/IP port number to use for the connection. 
@@ -118,10 +118,10 @@ After creating the `config.json` file, you will need to start MindsDB and provid
 ```
 python3 -m mindsdb --api=http,mysql --config=config.json
 ```
+
 The `--api` parameter specifies the type of API to use in this case HTTP and MySQL. The `--config` specifies the location of the configuration file.
 
-![Start MindsDB with config](/assets/data/mysql-client.gif)
-
+![Start MindsDB with config](/assets/data/start-config.gif)
 
 If MindsDB is succesfully connected to your MySQL database, it will create a new database `mindsdb` and new table `predictors`.
 After starting the server, from your mysql-client you can run `SELECT` query from it to make sure integration is succesfull.
