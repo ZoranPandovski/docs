@@ -1406,7 +1406,7 @@
 <p>To train a new model, you will neeed to <code>INSERT</code> a new record inside the mindsdb.predictors table.</p>
 <div class="admonition question">
 <p class="admonition-title">How to create mindsb.predictors table</p>
-<p>Note that after connecting <a href="datasources/mysql/#mysql-client">MindsDB and MySQL servers</a>, on
+<p>Note that after connecting <a href="/docs/datasources/mysql/#mysql-client">MindsDB and MySQL servers</a>, on
 start, MindsDB server will automaticly create the mindsdb database and add predictors table.</p>
 </div>
 <p>The <code>INSERT</code> query for training new model is quite simple e.g:</p>
@@ -1418,7 +1418,7 @@ start, MindsDB server will automaticly create the mindsdb database and add predi
 <li>name (string) -- The name of the model.</li>
 <li>predict (string) --  The feature you want to predict. To predict multiple features include a comma separated string e.g 'feature1,feature2'.</li>
 <li>select_data_query (string) -- The SELECT query that will ingest the data to train the model.</li>
-<li>training_options (JSON as comma separated string) -- optional value that contains additional training parameters. For a full list of the parameters check the <a href="/PredictorInterface/#learn">PredictorInterface</a>.</li>
+<li>training_options (JSON as comma separated string) -- optional value that contains additional training parameters. For a full list of the parameters check the <a href="/docs/PredictorInterface/#learn">PredictorInterface</a>.</li>
 </ul>
 <p><img alt="Train model from mysql client" src="/assets/predictors/mysql-insert.gif" /></p>
 <h3 id="train-new-model-example">Train new model example</h3>
@@ -1433,7 +1433,7 @@ start, MindsDB server will automaticly create the mindsdb database and add predi
 <p><img alt="Training model status" src="/assets/predictors/mysql-status.gif" /></p>
 <div class="admonition success">
 <p class="admonition-title">That's all <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" title=":tada:" /> <img alt="🏆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f3c6.png" title=":trophy:" />  <img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f4bb.png" title=":computer:" /></p>
-<p>You have succesfully trained new model from MySQL database. Next step is to get predictions by <a href="/query/mysql">querying the model</a>.</p>
+<p>You have succesfully trained new model from MySQL database. Next step is to get predictions by <a href="/docs/query/mysql">querying the model</a>.</p>
 </div>
                 
               
