@@ -1,6 +1,6 @@
 # Train a model from ClickHouse database
 
-![MindsDB-ClickHouse](/assets/databases/mdb-clickhouse.png)
+![MindsDB-ClickHouse](/docs/assets/databases/mdb-clickhouse.png)
 
 ### Train new model
 
@@ -22,7 +22,7 @@ The values provided in `INSERT` query are:
 * select_data_query (string) -- The SELECT query that will ingest the data to train the model.
 * training_options (JSON as comma separated string) -- optional value that contains additional training parameters. For a full list of the parameters check the [PredictorInterface](/docs/PredictorInterface/#learn).
 
-![Train model from clickhouse client](/assets/predictors/clickhouse-insert.gif)
+![Train model from clickhouse client](/docs/assets/predictors/clickhouse-insert.gif)
 
 ### Train new model example
 
@@ -44,7 +44,7 @@ To check that the training successfully finished you can `SELECT` from mindsdb.p
 SELECT * FROM mindsdb.predictors WHERE name='<model_name>';
 ```
 
-![Training model status](/assets/predictors/clickhouse-status.gif)
+![Training model status](/docs/assets/predictors/clickhouse-status.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
     You have succesfully trained new model from ClickHouse database. Next step is to get predictions by [querying the model](/docs/model/query/clickhouse/).

@@ -22,7 +22,7 @@ Training the new model from MindsDB Scout is quite easy:
     3. Check the column name (feature) that you want to predict.
     4. Press `TRAIN`. 
 
-![Train model basic mode](/assets/predictors/train-basic.gif)
+![Train model basic mode](/docs/assets/predictors/train-basic.gif)
 
 ### Advanced mode
 
@@ -37,7 +37,7 @@ In the `Advanced mode`, you can find a few additional options to train the Machi
     3. Add the `sample margin of error` value.
 5. Press `TRAIN`. 
 
-![Train model advanced mode](/assets/predictors/train-advanced.gif)
+![Train model advanced mode](/docs/assets/predictors/train-advanced.gif)
 
 #### Timeseries
 
@@ -53,7 +53,7 @@ To build the timeseries model, you need to select `Yes, it is` timeseries checkb
     4. Add the `Look Back Window:` value, the number of rows to `look back` into when making a prediction.
 5. Press `TRAIN`. 
 
-![Train timeseries](/assets/predictors/train-timeseries.gif)
+![Train timeseries](/docs/assets/predictors/train-timeseries.gif)
 
 
 !!! Success "That's all :tada: :trophy:  :computer:"

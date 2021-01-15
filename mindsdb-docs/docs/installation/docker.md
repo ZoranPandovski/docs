@@ -35,7 +35,7 @@ Next, run the bellow command to start the container:
 docker run -p 47334:47334 mindsdb/mindsdb
 ```
 
-![Docker run](/assets/docker-install.gif)
+![Docker run](/docs/assets/docker-install.gif)
 
 That's all. MindsDB should automaticaly start the Scout on your default browser.
 

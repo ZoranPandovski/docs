@@ -24,7 +24,7 @@ Or, wherever your files are publicly accessible. You can upload any tabular data
     2. Add name for the datasource.
     3. Click on `UPLOAD`.
 
-![Connect to remote url](/assets/data/remote.gif)
+![Connect to remote url](/docs/assets/data/remote.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
     You have succesfully connected to remote dataset from MindsDB Scout. Next step is to train the [Machine Learning model](/docs/model/train).

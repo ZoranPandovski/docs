@@ -19,7 +19,7 @@ Connecting MindsDB to the [Snowflake](https://www.snowflake.com/) could be easly
     6. Add Password for the user.
     7. Click on `CONNECT`.
 
-![Connect to Snowflake](/assets/data/snowflake.gif)
+![Connect to Snowflake](/docs/assets/data/snowflake.gif)
 
 #### Create new Datasource
 
@@ -30,7 +30,7 @@ Connecting MindsDB to the [Snowflake](https://www.snowflake.com/) could be easly
     3. Add SELECT Query e.g (SELECT * FROM my_database).
     4. Click on `CREATE`.
 
-![Create Snowflake Datasource](/assets/data/snowflake-ds.gif)
+![Create Snowflake Datasource](/docs/assets/data/snowflake-ds.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
     You have succesfully connected to Snowflake from MindsDB Scout. Next step is to train the [Machine Learning model](/docs/model/train).

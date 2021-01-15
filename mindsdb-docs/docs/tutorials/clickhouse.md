@@ -96,7 +96,7 @@ The --date_time_input_format=best_effort enables the datetime parser to parse th
 SELECT * FROM data.pollution_measurement LIMIT 5;‍
 ```
 
-![SELECT DB](/assets/tutorials/aitables-clickhouse/db-select.png)
+![SELECT DB](/docs/assets/tutorials/aitables-clickhouse/db-select.png)
 
 We are halfway there! We have successfully installed MindsDB and ClickHouse and have the data saved in the database. Now, we will use MindsDB to connect to ClickHouse and train and query Machine Learning models from the air pollution measurement data. If you don’t want to install ClickHouse locally, ClickHouse Docker image is a good solution.
 
@@ -154,7 +154,7 @@ USE mindsdb;
 SHOW TABLES;
 ```
 
-![SHOW TABLES](/assets/tutorials/aitables-clickhouse/show-tables.png)
+![SHOW TABLES](/docs/assets/tutorials/aitables-clickhouse/show-tables.png)
 
 The default table created inside mindsdb database will be predictors where MindsDB shall keep information about the predictors(ML models), training status, accuracy, 
 target variable and additional training options.
@@ -163,12 +163,12 @@ target variable and additional training options.
 DESCRIBE TABLE predictors;
 ```
 
-![Describe TABLE](/assets/tutorials/aitables-clickhouse/describe-table.png)
+![Describe TABLE](/docs/assets/tutorials/aitables-clickhouse/describe-table.png)
 
 
 When a user creates a new model or makes a query to any table, the query is sent by MySQL text protocol to MindsDB, where it hits the MindsDB’s API’s responsible for training, analyzing, querying the models.
 
-![MindsDB and ClickHouse](/assets/tutorials/aitables-clickhouse/mdb-ch.png)
+![MindsDB and ClickHouse](/docs/assets/tutorials/aitables-clickhouse/mdb-ch.png)
 
 
 Now, we have everything ready to create a model. We are going to use the data inside the pollution_measurement table to predict the Sulfur Dioxide(SO2) in the air. Creating the model is as simple as writing the INSERT query, where we will provide values for the few required attributes. Before creating the predictor make sure mindsdb database is used:
@@ -198,7 +198,7 @@ To check if the training of the model successfully finished, you can run:
 SELECT * FROM predictors WHERE name='airq_predictor'‍
 ```
 
-![MindsDB predictor](/assets/tutorials/aitables-clickhouse/select-predictors.png)
+![MindsDB predictor](/docs/assets/tutorials/aitables-clickhouse/select-predictors.png)
 
 Status complete means that the model training has finished successfully. Now, let’s create predictive analytics from the data by querying the created predictor. The idea was to predict the value of Sulfur Dioxide in the Seoul air station depending on the different measured parameters as NO2, O3, CO, location etc. 
 
@@ -207,7 +207,7 @@ SELECT SO2 as predicted, SO2_confidence as confidence from airq_predictor
 WHERE NO2=0.005 AND CO=1.2 AND PM10=5;
 ```
 
-![MindsDB query](/assets/tutorials/aitables-clickhouse/select-where.png)
+![MindsDB query](/docs/assets/tutorials/aitables-clickhouse/select-where.png)
 
 
 Now you can see that MindsDB predicted that the value of Sulfur Dioxide is 0.00115645 with around 98% confidence.To get additional information about the predicted value and confidence, we should include the explain column. In that case, the MindsDB’s explain functionality apart from confidence can provide additional information such as prediction quality, confidence interval, missing information for improving the prediction etc. We can extend the query and include an additional column for explanation information:
@@ -221,7 +221,7 @@ FROM airq_predictor
 WHERE (NO2 = 0.005) AND (CO = 1.2) AND (PM10 = 5)
 ```
 
-![MindsDB query info](/assets/tutorials/aitables-clickhouse/select-info.png)
+![MindsDB query info](/docs/assets/tutorials/aitables-clickhouse/select-info.png)
 
 Now we get additional information: 
 
@@ -257,7 +257,7 @@ FROM airq_predictor
 WHERE (NO2 = 0.005) AND (CO = 1.2) AND (PM10 = 5) AND (`Station code` = '32') AND `PM2.5`=50
 ```
 
-![MindsDB query info](/assets/tutorials/aitables-clickhouse/select-infoq.png)
+![MindsDB query info](/docs/assets/tutorials/aitables-clickhouse/select-infoq.png)
 
 
 Now the predicted value has changed by adding the feature that MindsDB thought is quite important for better prediction. Additionally we can try and predict the Sulfur Dioxide in the air in some future date. What we can do is just include the Measurement date value inside WHERE clause for the specific date we want to get prediction e.g :
@@ -270,15 +270,15 @@ FROM airq_predictor
 WHERE (NO2 = 0.005) AND (CO = 1.2) AND (PM10 = 5) AND (`Station code` = '32') AND `PM2.5`=50 AND `Measurement date`=’2020-07-03 00:01:00’
 ```
 
-![MindsDB query info](/assets/tutorials/aitables-clickhouse/select-info1.png)
+![MindsDB query info](/docs/assets/tutorials/aitables-clickhouse/select-info1.png)
 
 Or few weeks later as:
 
-![MindsDB query info](/assets/tutorials/aitables-clickhouse/select-info2.png)
+![MindsDB query info](/docs/assets/tutorials/aitables-clickhouse/select-info2.png)
 
 At the end, the whole flow was as simple as seeing MindsDB as a database inside ClickHouse and executing queries for INSERT and SELECT directly from it.
 
 
-![MindsDB diagram](/assets/tutorials/aitables-clickhouse/select-diagram.png)
+![MindsDB diagram](/docs/assets/tutorials/aitables-clickhouse/select-diagram.png)
 
 If you follow up to this tutorial with your own data, we are happy to hear about how MindsDB has come in useful to you. Everything that we did in this tutorial will be available through the MindsDB’s Graphical User Interface MindsDB Scout in the next release. That means with a few clicks on MindsDB Scout you can successfully train ML models from your ClickHouse database too.

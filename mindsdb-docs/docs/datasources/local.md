@@ -18,7 +18,7 @@ Uploading local dataset to MindsDB could be easly done with a few clicks. You ca
     3. Add name for the datasource.
     4. Click on `UPLOAD`.
 
-![upload data locally](/assets/data/local.gif)
+![upload data locally](/docs/assets/data/local.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
     You have succesfully uploaded your local dataset from MindsDB Scout. Next step is to train the [Machine Learning model](/docs/model/train).

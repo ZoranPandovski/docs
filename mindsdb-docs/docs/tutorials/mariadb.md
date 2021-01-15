@@ -65,7 +65,7 @@ The whole integration consists of two important parts:
 * The ML model generation and training is done through a simple INSERT statement.
 This is possible thanks to MariaDBs CONNECT engine, which enables us to publish tables that live outside MariaDB. Since MindsDB supports the MySQL tcp-ip protocol, AI-Tables can be plugged as if they are external MariaDB tables. The following diagram illustrates this process.
 
-![MindsDB MariaDB](/assets/tutorials/aitables-mariadb/mdb-maria.png)
+![MindsDB MariaDB](/docs/assets/tutorials/aitables-mariadb/mdb-maria.png)
 
 The resource intensive Machine Learning tasks like model training happen on a separate MindsDB server instance or in the cloud, so that the Database performance is not affected.
 
@@ -91,7 +91,7 @@ pip show mindsdb
 
 And you should be able to see the MindsDB information as name, version, summary, license etc:
 
-![MindsDB version](/assets/tutorials/aitables-mariadb/mdb-ver.png)
+![MindsDB version](/docs/assets/tutorials/aitables-mariadb/mdb-ver.png)
 
 That’s all. Let’s set up the required configuration and start MindsDB.
 
@@ -142,7 +142,7 @@ Let’s select the data from used_cars_data table to make sure it is successfull
 SELECT * FROM  test.used_cars_data LIMIT 5;
 ```
 
-![SELECT data](/assets/tutorials/aitables-mariadb/select-data.png)
+![SELECT data](/docs/assets/tutorials/aitables-mariadb/select-data.png)
 
 The data is inside MariaDB so the next step is to add the required configuration.
 
@@ -212,7 +212,7 @@ The flags added here are:
 * –config – The path to the config.json file we have created before.
 If MindsDB was successfully started there should be a new database automatically created in MariaDB called mindsdb with two tables (commands and predictors).
 
-![Database](/assets/tutorials/aitables-mariadb/database.png)
+![Database](/docs/assets/tutorials/aitables-mariadb/database.png)
 In these tables, MindsDB will keep information about the models, model accuracy, training status, target variable that we will predict and additional options used for model training.
 
 ### Create new predictor
@@ -230,17 +230,18 @@ What this query does is it creates a new model called ‘used_cars_model’ , sp
 * training_options (dictionary) – optional value that contains additional training parameters. For a full list of the parameters check the mindsdb.docs.
 You should see the message about the successful execution of the query and if you open up the console, the MindsDB logger shall display messages while training the model.
 
-![Database](/assets/tutorials/aitables-mariadb/training.png)
+![Database](/docs/assets/tutorials/aitables-mariadb/training.png)
 
 Training could take some time depending on the data used, columns types, size etc. In our example not more than 2-3 min. To check that model was successfully trained run:
 
 ```sql
 SELECT * FROM mindsdb.predictors WHERE name='used_cars_model'
 ```
-![Database](/assets/tutorials/aitables-mariadb/training-run.png)
+![Database](/docs/assets/tutorials/aitables-mariadb/training-run.png)
+
 The column status shall be complete and the model accuracy will be saved when the training finishes.
 
-![Database](/assets/tutorials/aitables-mariadb/training-finish.png)
+![Database](/docs/assets/tutorials/aitables-mariadb/training-finish.png)
 
 The model has been trained successfully. It was quite simple because we didn’t do any hyperparameters tuning or features engineering and leave that out to MindsDB as an AutoML framework to try and fit the best model. With the INSERT query, we just provided labeled data as an input. The next step is to query the trained model with SELECT and get the output from it (predict the price of the car).
 
@@ -264,7 +265,7 @@ WHERE  model = "a6"
        AND tax = 20; 
 ```
 
-![Predicted value](/assets/tutorials/aitables-mariadb/predicted.png)
+![Predicted value](/docs/assets/tutorials/aitables-mariadb/predicted.png)
 
 You should see that MindsDB is quite confident that the car with all of the above characteristics as included in the WHERE clause shall cost around 13,111. To get additional information about the prediction include the explain column in the SELECT e.g:
 
@@ -283,7 +284,7 @@ WHERE  model = "a6"
        AND tax = 20; 
 ```
 
-![Predicted info](/assets/tutorials/aitables-mariadb/predicted-info.png)
+![Predicted info](/docs/assets/tutorials/aitables-mariadb/predicted-info.png)
 
 Note that to beautify the resultFormat you can add command line option format for particular session.
 Now MindsDB will display additional information in the info column as prediction quality, confidence interval, missing information for improving the prediction etc.
@@ -342,7 +343,7 @@ WHERE  model = "a1"
        AND tax = 30; 
 ```
 
-![Predicted value](/assets/tutorials/aitables-mariadb/predicted1.png)
+![Predicted value](/docs/assets/tutorials/aitables-mariadb/predicted1.png)
 
 Now, MindsDB thinks that this type of car would cost around 12k and price ranges to 23k.
 

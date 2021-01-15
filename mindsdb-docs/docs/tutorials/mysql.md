@@ -72,7 +72,7 @@ Let’s Select some data from bank_churn table to check that the data was succes
 SELECT * FROM bank_churn LIMIT 1;
 ```
 
-![SELECT FROM bank_churn](/assets/tutorials/aitables-mysql/select_table.png)
+![SELECT FROM bank_churn](/docs/assets/tutorials/aitables-mysql/select_table.png)
 
 ## Add Configuration
 
@@ -131,7 +131,7 @@ host(default 127.0.0.1) - The mindsdb server address.
 Now, we have successfully set up all of the requirements for AI Tables in MySQL.
 
 ### AutoML with AI Tables in MySQL
-If you don't have MindsDB installed, check out our [Installation guide](/Installing) and find an option that works for you. After that start the MindsDB server:
+If you don't have MindsDB installed, check out our [Installation guide](/docs/Installing) and find an option that works for you. After that start the MindsDB server:
 
 ```
 python3 -m mindsdb --api=mysql --config=config.json
@@ -143,12 +143,12 @@ The arguments sent to MindsDB are:
 * --config - The path to the configuration file that we have created.
 If everything works as expected you should see the following message:
 
-![MindsDB Started](/assets/tutorials/aitables-postgresql/mindsdb_started.png)
+![MindsDB Started](/docs/assets/tutorials/aitables-postgresql/mindsdb_started.png)
 
 
 Upon successful setup, MindsDB should create a new database called mindsdb.
 
-![MindsDB Schema](/assets/tutorials/aitables-mysql/list_tables.png)
+![MindsDB Schema](/docs/assets/tutorials/aitables-mysql/list_tables.png)
 
 
 In the mindsdb database, two new tables should be created called commands and predictors. The mindsdb.predictors table is the table where MindsDB will keep information about trained models.
@@ -173,7 +173,7 @@ To check that the training successfully finished we can `SELECT` from mindsdb.pr
 SELECT * FROM mindsdb.predictors WHERE name='churn_model';
 ```
 
-![Status](/assets/tutorials/aitables-mysql/select_status.png)
+![Status](/docs/assets/tutorials/aitables-mysql/select_status.png)
 
 The status complete means that training successfully finished. Now, let’s query the model. 
 The trained model behaves like an AI Table and can be queried as it is a standard database table. To get the prediction we need to execute a `SELECT` query and in the `WHERE` clause include the when_data as a JSON string that includes features values such as CreditScore, EstimatedSalary, Gender, Balance etc.

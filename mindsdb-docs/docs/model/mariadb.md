@@ -1,6 +1,6 @@
 # How to train a model from MariaDB?
 
-![MindsDB-MariaDB](/assets/databases/mdb-maria.png)
+![MindsDB-MariaDB](/docs/assets/databases/mdb-maria.png)
 
 ### How to train new model?
 
@@ -23,7 +23,7 @@ The values provided in `INSERT` query are:
 * select_data_query (string) -- The SELECT query that will ingest the data to train the model.
 * training_options (JSON as comma separated string) -- optional value that contains additional training parameters. For a full list of the parameters check the [PredictorInterface](/docs/PredictorInterface/#learn).
 
-![Train model from mariadb client](/assets/predictors/mariadb-insert.gif)
+![Train model from mariadb client](/docs/assets/predictors/mariadb-insert.gif)
 
 ### Train new model example
 
@@ -46,7 +46,7 @@ To check that the training successfully finished you can `SELECT` from mindsdb.p
 SELECT * FROM mindsdb.predictors WHERE name='<model_name>';
 ```
 
-![Training model status](/assets/predictors/mariadb-status.gif)
+![Training model status](/docs/assets/predictors/mariadb-status.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
     You have succesfully trained new model from MariaDB database. Next step is to get predictions by [querying the model](/docs/model/query/mariadb).

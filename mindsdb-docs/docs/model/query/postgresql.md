@@ -51,4 +51,4 @@ info: {
 }
 ```
 
-![Model predictions](/assets/predictors/postgresql-query.gif)
+![Model predictions](/docs/assets/predictors/postgresql-query.gif)

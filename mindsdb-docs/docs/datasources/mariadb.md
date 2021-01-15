@@ -31,7 +31,7 @@ Using MindsDB Scout, you can connect to the MariaDB database with a few clicks.
     7. Click on `CONNECT`.
 
 
-![Connect to MariaDB](/assets/data/mariadb.gif)
+![Connect to MariaDB](/docs/assets/data/mariadb.gif)
 
 #### Create new Datasource
 
@@ -42,7 +42,7 @@ Using MindsDB Scout, you can connect to the MariaDB database with a few clicks.
     3. Add SELECT Query e.g (SELECT * FROM my_database)
     4. Click on `CREATE`.
 
-![Create MariaDB Datasource](/assets/data/mariadb-ds.gif)
+![Create MariaDB Datasource](/docs/assets/data/mariadb-ds.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
     You have succesfully connected to MariaDB from MindsDB Scout. Next step is to train the [Machine Learning model](/docs/model/train).
@@ -120,7 +120,7 @@ python3 -m mindsdb --api=http,mysql --config=config.json
 
 The `--api` parameter specifies the type of API to use in this case HTTP and MySQL. The `--config` specifies the location of the configuration file.
 
-![Start MindsDB with config](/assets/data/start-config.gif)
+![Start MindsDB with config](/docs/assets/data/start-config.gif)
 
 If MindsDB is succesfully connected to your MariaDB database, it will create a new database `mindsdb` and new table `predictors`.
 After starting the server, from your mariadb-client you can run `SELECT` query from it to make sure integration is succesfull.
@@ -129,7 +129,7 @@ After starting the server, from your mariadb-client you can run `SELECT` query f
 SELECT * FROM mindsdb.predictors;
 ```
 
-![SELECT from MindsDB predictors table](/assets/data/mariadb-select.gif)
+![SELECT from MindsDB predictors table](/docs/assets/data/mariadb-select.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
     You have succesfully connected MindsDB Server and MariaDB. Next step is to [train the Machine Learning model](/docs/model/mariadb).

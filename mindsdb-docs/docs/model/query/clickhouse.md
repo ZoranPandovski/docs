@@ -43,4 +43,4 @@ info:{
 }
 ```
 
-![Model predictions](/assets/predictors/clickhouse-query.gif)
+![Model predictions](/docs/assets/predictors/clickhouse-query.gif)

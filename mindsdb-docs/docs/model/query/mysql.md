@@ -45,4 +45,4 @@ info: {
 }
 ```
 
-![Model predictions](/assets/predictors/mysql-query.gif)
+![Model predictions](/docs/assets/predictors/mysql-query.gif)

@@ -19,4 +19,4 @@ In this example we want to solve the problem of estimating the right price for a
         1. Mileage 20 000.
         2. Fuel type Diesel.
 
-![Query from Scout](/assets/predictors/query-scout.gif)
+![Query from Scout](/docs/assets/predictors/query-scout.gif)

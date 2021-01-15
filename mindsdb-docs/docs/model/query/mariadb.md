@@ -55,4 +55,4 @@ info: {
 }
 ```
 
-![Model predictions](/assets/predictors/mariadb-query.gif)
+![Model predictions](/docs/assets/predictors/mariadb-query.gif)
