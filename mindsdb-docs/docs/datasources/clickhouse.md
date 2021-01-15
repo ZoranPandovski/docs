@@ -37,7 +37,7 @@ Using MindsDB Scout, you can connect to the ClickHouse database with a few click
 ![Create ClickHouse Datasource](/assets/data/clickhouse-ds.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have succesfully connected to ClickHouse from MindsDB Scout. Next step is to train the [Machine Learning model](/model/train).
+    You have succesfully connected to ClickHouse from MindsDB Scout. Next step is to train the [Machine Learning model](/docs/model/train).
 
 ## ClickHouse client
 
@@ -127,4 +127,4 @@ SELECT * FROM mindsdb.predictors;
 ![SELECT from MindsDB predictors table](/assets/data/clickhouse-select.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have succesfully connected MindsDB Server and ClickHouse. Next step is to [train the Machine Learning model](/model/clickhouse).
+    You have succesfully connected MindsDB Server and ClickHouse. Next step is to [train the Machine Learning model](/docs/model/clickhouse).

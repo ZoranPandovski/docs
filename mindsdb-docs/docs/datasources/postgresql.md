@@ -45,7 +45,7 @@ Using MindsDB Scout, you can connect to the PostgreSQL database with a few click
 ![Create PostgreSQL Datasource](/assets/data/postgresql-ds.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have succesfully connected to PostgreSQL from MindsDB Scout. Next step is to train the [Machine Learning model](/model/train).
+    You have succesfully connected to PostgreSQL from MindsDB Scout. Next step is to train the [Machine Learning model](/docs/model/train).
 
 ## PSQL client
 
@@ -135,4 +135,4 @@ SELECT * FROM mindsdb.predictors;
 ![SELECT from MindsDB predictors table](/assets/data/psql-select.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have succesfully connected MindsDB Server and PostgreSQL. Next step is to [train the Machine Learning model](/model/postgresql).
+    You have succesfully connected MindsDB Server and PostgreSQL. Next step is to [train the Machine Learning model](/docs/model/postgresql).

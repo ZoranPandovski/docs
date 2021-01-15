@@ -33,4 +33,4 @@ Connecting MindsDB to the [Snowflake](https://www.snowflake.com/) could be easly
 ![Create Snowflake Datasource](/assets/data/snowflake-ds.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have succesfully connected to Snowflake from MindsDB Scout. Next step is to train the [Machine Learning model](/model/train).
+    You have succesfully connected to Snowflake from MindsDB Scout. Next step is to train the [Machine Learning model](/docs/model/train).

@@ -73,4 +73,4 @@ You should see a list with the names of installed packages.
 
 3. If you are using macOS and got error about system dependencies, try installing MindsDB with [Anaconda](https://www.anaconda.com/products/individual) and run the installation from the **anaconda prompt**.
 
-4. If none of this works, try installing mindsdb using the [docker container]() and create an issue with the installation errors you got on our  [Github repository](https://github.com/mindsdb/mindsdb/issues) and we'll try to review it within a few hours.
+4. If none of this works, try installing mindsdb using the [docker container](/docs/installation/docker) and create an issue with the installation errors you got on our  [Github repository](https://github.com/mindsdb/mindsdb/issues) and we'll try to review it within a few hours.

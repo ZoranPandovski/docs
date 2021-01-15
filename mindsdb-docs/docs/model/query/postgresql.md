@@ -1,6 +1,6 @@
 # Query the model from PostgreSQL database
 
-This section assumes that you have trained new model using [psql](/model/postgresql/) or [MindsDB Scout](model/train/). To query the model, you will neeed to `SELECT` from the model table as:
+This section assumes that you have trained new model using [psql](/docs/model/postgresql/) or [MindsDB Scout](/docs/model/train/). To query the model, you will neeed to `SELECT` from the model table as:
 
 ```sql
 SELECT

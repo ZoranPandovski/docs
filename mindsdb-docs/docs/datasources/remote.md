@@ -27,4 +27,4 @@ Or, wherever your files are publicly accessible. You can upload any tabular data
 ![Connect to remote url](/assets/data/remote.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have succesfully connected to remote dataset from MindsDB Scout. Next step is to train the [Machine Learning model](/model/train).
+    You have succesfully connected to remote dataset from MindsDB Scout. Next step is to train the [Machine Learning model](/docs/model/train).

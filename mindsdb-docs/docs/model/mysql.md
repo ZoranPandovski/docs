@@ -7,7 +7,7 @@
 To train a new model, you will neeed to `INSERT` a new record inside the mindsdb.predictors table.
 
 !!! question "How to create mindsb.predictors table"
-    Note that after connecting [MindsDB and MySQL servers](datasources/mysql/#mysql-client), on
+    Note that after connecting [MindsDB and MySQL servers](/docs/datasources/mysql/#mysql-client), on
     start, MindsDB server will automaticly create the mindsdb database and add predictors table.
 
 The `INSERT` query for training new model is quite simple e.g:
@@ -22,7 +22,7 @@ The values provided in `INSERT` query are:
 * name (string) -- The name of the model.
 * predict (string) --  The feature you want to predict. To predict multiple features include a comma separated string e.g 'feature1,feature2'.
 * select_data_query (string) -- The SELECT query that will ingest the data to train the model.
-* training_options (JSON as comma separated string) -- optional value that contains additional training parameters. For a full list of the parameters check the [PredictorInterface](/PredictorInterface/#learn).
+* training_options (JSON as comma separated string) -- optional value that contains additional training parameters. For a full list of the parameters check the [PredictorInterface](/docs/PredictorInterface/#learn).
 
 ![Train model from mysql client](/assets/predictors/mysql-insert.gif)
 
@@ -47,4 +47,4 @@ SELECT * FROM mindsdb.predictors WHERE name='<model_name>';
 ![Training model status](/assets/predictors/mysql-status.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have succesfully trained new model from MySQL database. Next step is to get predictions by [querying the model](/query/mysql).
+    You have succesfully trained new model from MySQL database. Next step is to get predictions by [querying the model](/docs/query/mysql).

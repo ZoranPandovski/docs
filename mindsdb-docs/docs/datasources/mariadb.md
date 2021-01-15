@@ -45,7 +45,7 @@ Using MindsDB Scout, you can connect to the MariaDB database with a few clicks.
 ![Create MariaDB Datasource](/assets/data/mariadb-ds.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have succesfully connected to MariaDB from MindsDB Scout. Next step is to train the [Machine Learning model](/model/train).
+    You have succesfully connected to MariaDB from MindsDB Scout. Next step is to train the [Machine Learning model](/docs/model/train).
 
 ## MySQL client
 
@@ -132,4 +132,4 @@ SELECT * FROM mindsdb.predictors;
 ![SELECT from MindsDB predictors table](/assets/data/mariadb-select.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have succesfully connected MindsDB Server and MariaDB. Next step is to [train the Machine Learning model](/model/mariadb).
+    You have succesfully connected MindsDB Server and MariaDB. Next step is to [train the Machine Learning model](/docs/model/mariadb).

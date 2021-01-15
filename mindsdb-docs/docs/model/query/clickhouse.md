@@ -1,6 +1,6 @@
 # Query the model from ClickHouse database
 
-This section assumes that you have trained new model using [clickhouse-client](/model/clickhouse/) or [MindsDB Scout](model/train/). To query the model, you will neeed to `SELECT` from the model table as:
+This section assumes that you have trained new model using [clickhouse-client](/docs/model/clickhouse/) or [MindsDB Scout](/docs/model/train/). To query the model, you will neeed to `SELECT` from the model table as:
 
 ```sql
 SELECT

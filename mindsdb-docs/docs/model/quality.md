@@ -38,4 +38,4 @@ Here, the confusion matrix shows the performance that the model gets when solvin
 
 
 !!! Success "Let's Query the model :bar_chart: :mag_right:"
-    After evaluating the performance of the model, next step is to get predictions by [querying the model](/model/query/scout/).
+    After evaluating the performance of the model, next step is to get predictions by [querying the model](/docs/model/query/scout/).

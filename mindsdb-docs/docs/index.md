@@ -12,38 +12,38 @@ There are a few options to install MindsDB on different operating systems. To fi
 === "Docker"
 
     !!! info "Installation"
-        Follow the [Docker installation](/installation/docker) instructions.
+        Follow the [Docker installation](/docs/installation/docker) instructions.
 
 === "Windows"
 
     !!! info "Installation"
-        Follow the [Windows installation](/installation/Windows) instructions.
+        Follow the [Windows installation](/docs/installation/Windows) instructions.
 
 === "Linux"
 
     !!! info "Installation"
-        Follow the [Linux installation](/installation/Linux) instructions.
+        Follow the [Linux installation](/docs/installation/Linux) instructions.
 
 === "macOS"
 
     !!! info "Installation"
-        Follow the [macOS installation](/installation/MacOS) instructions.
+        Follow the [macOS installation](/docs/installation/MacOS) instructions.
 
 === "Source"
 
     !!! info "Installation"
-        Follow the from [source installation](/installation/source) instructions.
+        Follow the from [source installation](/docs/installation/source) instructions.
 
 
 ## Tutorials
-* [AiTables in MySQL](/tutorials/mysql)
-* [AiTables in MariaDB](/tutorials/mariadb)
-* [AiTables in PostgreSQL](/tutorials/postgresql)
-* [AiTables in ClickHouse](/tutorials/clickhouse)
+* [AiTables in MySQL](/docs/tutorials/mysql)
+* [AiTables in MariaDB](/docs/tutorials/mariadb)
+* [AiTables in PostgreSQL](/docs/tutorials/postgresql)
+* [AiTables in ClickHouse](/docs/tutorials/clickhouse)
 
 ## Contribute to MindsDB
-* [Became a contributor to MindsDB](/contribute)
-* [Join MindsDB community](/community)
+* [Became a contributor to MindsDB](/docs/contribute)
+* [Join MindsDB community](/docs/community)
 
 ## Useful links
  * [MindsDB APIs documentation](https://apidocs.mindsdb.com/)

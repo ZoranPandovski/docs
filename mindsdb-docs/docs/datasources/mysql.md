@@ -46,7 +46,7 @@ Using MindsDB Scout, you can connect to the MySQL database with a few clicks.
 ![Create MySQL Datasource](/assets/data/mysql-ds.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have succesfully connected to MySQL from MindsDB Scout. Next step is to train the [Machine Learning model](/model/train).
+    You have succesfully connected to MySQL from MindsDB Scout. Next step is to train the [Machine Learning model](/docs/model/train).
 
 ## MySQL client
 
@@ -133,4 +133,4 @@ SELECT * FROM mindsdb.predictors;
 ![SELECT from MindsDB predictors table](/assets/data/mysql-select.gif)
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have succesfully connected MindsDB Server and MySQL. Next step is to [train the Machine Learning model](/model/mysql).
+    You have succesfully connected MindsDB Server and MySQL. Next step is to [train the Machine Learning model](/docs/model/mysql).

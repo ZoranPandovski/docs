@@ -2,13 +2,13 @@
 
 Before training the new model you must connect to a Datasource. To learn how to do that check out:
 
-* [Connect to MySQL](/datasources/mysql)
-* [Connect to PostgreSQL](/datasources/mysql)
-* [Connect to MariaDB](/datasources/mariadb).
-* [Connect to ClickHouse](/datasources/clickhouse)
-* [Connect to remote URL](/datasources/remote)
-* [Upload local dataset](/datasources/local)
-* [Connect to Snowflake](/datasources/snowflake)
+* [Connect to MySQL](/docs/datasources/mysql)
+* [Connect to PostgreSQL](/docs/datasources/mysql)
+* [Connect to MariaDB](/docs/datasources/mariadb).
+* [Connect to ClickHouse](/docs/datasources/clickhouse)
+* [Connect to remote URL](/docs/datasources/remote)
+* [Upload local dataset](/docs/datasources/local)
+* [Connect to Snowflake](/docs/datasources/snowflake)
 
 ### Basic mode
 
@@ -57,4 +57,4 @@ To build the timeseries model, you need to select `Yes, it is` timeseries checkb
 
 
 !!! Success "That's all :tada: :trophy:  :computer:"
-    You have successfully trained a new Machine Learning model. The next step is to evaluate the [model quality](/model/quality).
+    You have successfully trained a new Machine Learning model. The next step is to evaluate the [model quality](/docs/model/quality).
