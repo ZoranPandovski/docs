@@ -418,7 +418,7 @@
 
   <li class="md-nav__item">
     <a href="../../model/train/" class="md-nav__link">
-      Create and train from Scout
+      Create and train from Studio
     </a>
   </li>
 
@@ -528,7 +528,7 @@
 
   <li class="md-nav__item">
     <a href="../../model/quality/" class="md-nav__link">
-      Evaluate from Scout
+      Evaluate from Studio
     </a>
   </li>
 
@@ -637,8 +637,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../model/query/scout/" class="md-nav__link">
-      Query from Scout
+    <a href="../../model/query/Studio.md" class="md-nav__link">
+      Query from Studio
     </a>
   </li>
 
@@ -1493,7 +1493,7 @@
 <span class="c1"># now print the results</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The predicted price is between $</span><span class="si">{price}</span><span class="s1"> with </span><span class="si">{conf}</span><span class="s1"> confidence&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">price</span><span class="o">=</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">explanation</span><span class="p">[</span><span class="s1">&#39;rental_price&#39;</span><span class="p">][</span><span class="s1">&#39;confidence_interval&#39;</span><span class="p">],</span> <span class="n">conf</span><span class="o">=</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">explanation</span><span class="p">[</span><span class="s1">&#39;rental_price&#39;</span><span class="p">][</span><span class="s1">&#39;confidence&#39;</span><span class="p">]))</span>
 </code></pre></div>
-<p>Generally speaking, Mindsdb differentiates itself from other libraries by its <strong>simplicity</strong>. Lastly, <a href="https://www.mindsdb.com/product">Mindsdb Scout</a> provides you with an easy way to visiualize more insights about the model. This can also be done by calling <code>mdb.get_model_data('model_name')</code>, but it's easier to use Mindsdb Scout to visualize the data, rather than looking at the raw json.</p>
+<p>Generally speaking, Mindsdb differentiates itself from other libraries by its <strong>simplicity</strong>. Lastly, <a href="https://www.mindsdb.com/product">Mindsdb Studio</a> provides you with an easy way to visiualize more insights about the model. This can also be done by calling <code>mdb.get_model_data('model_name')</code>, but it's easier to use Mindsdb Studio to visualize the data, rather than looking at the raw json.</p>
 <h1 id="comparing-mindsdb-accuracy-with-state-of-the-art-models">Comparing Mindsdb accuracy with state-of-the-art models</h1>
 <p>We have a few example datasets where we try to compare the accuracy obtained by Mindsdb with that of the best models we could find.</p>
 <p>It should be noted, Mindsdb accuracy doesn't always beat or match stat-of-the-art models, but the main goal of Mindsdb is to learn quickly, be very easy to use and be adaptable on any dataset.</p>
