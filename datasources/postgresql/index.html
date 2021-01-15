@@ -1458,7 +1458,7 @@
 </ol>
 </li>
 </ol>
-<p><img alt="Connect to PostgreSQL" src="/assets/data/postgresql.gif" /></p>
+<p><img alt="Connect to PostgreSQL" src="/docs/assets/data/postgresql.gif" /></p>
 <h4 id="create-new-datasource">Create new Datasource</h4>
 <ol>
 <li>Click on the <code>NEW DATASOURCE</code> button.</li>
@@ -1470,7 +1470,7 @@
 </ol>
 </li>
 </ol>
-<p><img alt="Create PostgreSQL Datasource" src="/assets/data/postgresql-ds.gif" /></p>
+<p><img alt="Create PostgreSQL Datasource" src="/docs/assets/data/postgresql-ds.gif" /></p>
 <div class="admonition success">
 <p class="admonition-title">That's all <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" title=":tada:" /> <img alt="🏆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f3c6.png" title=":trophy:" />  <img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f4bb.png" title=":computer:" /></p>
 <p>You have succesfully connected to PostgreSQL from MindsDB Scout. Next step is to train the <a href="/docs/model/train">Machine Learning model</a>.</p>
@@ -1551,12 +1551,12 @@
 <div class="highlight"><pre><span></span><code>python3 -m mindsdb --api=http,mysql --config=config.json
 </code></pre></div>
 <p>The <code>--api</code> parameter specifies the type of API to use in this case HTTP and MySQL. The <code>--config</code> specifies the location of the configuration file.</p>
-<p><img alt="Start MindsDB with config" src="/assets/data/start-config.gif" /></p>
+<p><img alt="Start MindsDB with config" src="/docs/assets/data/start-config.gif" /></p>
 <p>If MindsDB is succesfully connected to your PostgreSQL database, it will create a new schema <code>mindsdb</code> and new table <code>predictors</code>.
 After starting the server, from your psql-client you can run <code>SELECT</code> query from it to make sure integration is succesfull.</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">mindsdb</span><span class="p">.</span><span class="n">predictors</span><span class="p">;</span>
 </code></pre></div>
-<p><img alt="SELECT from MindsDB predictors table" src="/assets/data/psql-select.gif" /></p>
+<p><img alt="SELECT from MindsDB predictors table" src="/docs/assets/data/psql-select.gif" /></p>
 <div class="admonition success">
 <p class="admonition-title">That's all <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" title=":tada:" /> <img alt="🏆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f3c6.png" title=":trophy:" />  <img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f4bb.png" title=":computer:" /></p>
 <p>You have succesfully connected MindsDB Server and PostgreSQL. Next step is to <a href="/docs/model/postgresql">train the Machine Learning model</a>.</p>

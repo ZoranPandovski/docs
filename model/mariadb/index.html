@@ -1389,7 +1389,7 @@
                 
                 
                 <h1 id="how-to-train-a-model-from-mariadb">How to train a model from MariaDB?</h1>
-<p><img alt="MindsDB-MariaDB" src="/assets/databases/mdb-maria.png" /></p>
+<p><img alt="MindsDB-MariaDB" src="/docs/assets/databases/mdb-maria.png" /></p>
 <h3 id="how-to-train-new-model">How to train new model?</h3>
 <p>To train a new model, you will neeed to <code>INSERT</code> a new record inside the mindsdb.predictors table.</p>
 <div class="admonition question">
@@ -1408,7 +1408,7 @@ The values provided in <code>INSERT</code> query are:</p>
 <li>select_data_query (string) -- The SELECT query that will ingest the data to train the model.</li>
 <li>training_options (JSON as comma separated string) -- optional value that contains additional training parameters. For a full list of the parameters check the <a href="/docs/PredictorInterface/#learn">PredictorInterface</a>.</li>
 </ul>
-<p><img alt="Train model from mariadb client" src="/assets/predictors/mariadb-insert.gif" /></p>
+<p><img alt="Train model from mariadb client" src="/docs/assets/predictors/mariadb-insert.gif" /></p>
 <h3 id="train-new-model-example">Train new model example</h3>
 <p>The following example shows you how to train new model from mariadb-client. The table used for training the model is same as <a href="https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes">Used cars</a> dataset.</p>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span>
@@ -1421,7 +1421,7 @@ The values provided in <code>INSERT</code> query are:</p>
 <p>To check that the training successfully finished you can <code>SELECT</code> from mindsdb.predictors table and get the training status e.g:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">mindsdb</span><span class="p">.</span><span class="n">predictors</span> <span class="k">WHERE</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&lt;model_name&gt;&#39;</span><span class="p">;</span>
 </code></pre></div>
-<p><img alt="Training model status" src="/assets/predictors/mariadb-status.gif" /></p>
+<p><img alt="Training model status" src="/docs/assets/predictors/mariadb-status.gif" /></p>
 <div class="admonition success">
 <p class="admonition-title">That's all <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" title=":tada:" /> <img alt="🏆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f3c6.png" title=":trophy:" />  <img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f4bb.png" title=":computer:" /></p>
 <p>You have succesfully trained new model from MariaDB database. Next step is to get predictions by <a href="/docs/model/query/mariadb">querying the model</a>.</p>

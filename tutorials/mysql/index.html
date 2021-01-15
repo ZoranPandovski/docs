@@ -1500,7 +1500,7 @@ Using pgAdmin, DBeaver or another SQL client just use the import from CSV file o
 <p>Let’s Select some data from bank_churn table to check that the data was successfully imported to MySQL:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">bank_churn</span> <span class="k">LIMIT</span> <span class="mi">1</span><span class="p">;</span>
 </code></pre></div>
-<p><img alt="SELECT FROM bank_churn" src="/assets/tutorials/aitables-mysql/select_table.png" /></p>
+<p><img alt="SELECT FROM bank_churn" src="/docs/assets/tutorials/aitables-mysql/select_table.png" /></p>
 <h2 id="add-configuration">Add Configuration</h2>
 <p>As a prerequisite for using <a href="https://www.mysql.com/downloads/">MySQL</a> we need to enable the Federated Storage engine. Check out the official <a href="https://dev.mysql.com/doc/refman/8.0/en/federated-storage-engine.html">MySQL documentation</a> to see how you can do that.</p>
 <p>The last step is to create the MindsDB’s configuration file. MindsDB will try to use the default configuration options like host, port or username for MySQL. In case you want to extend them or change the default values you need to add a config.json file. Create a new file config.json and include the following information:</p>
@@ -1556,7 +1556,7 @@ host(default 127.0.0.1) - The mindsdb server address.</li>
 </ul>
 <p>Now, we have successfully set up all of the requirements for AI Tables in MySQL.</p>
 <h3 id="automl-with-ai-tables-in-mysql">AutoML with AI Tables in MySQL</h3>
-<p>If you don't have MindsDB installed, check out our <a href="/Installing">Installation guide</a> and find an option that works for you. After that start the MindsDB server:</p>
+<p>If you don't have MindsDB installed, check out our <a href="/docs/Installing">Installation guide</a> and find an option that works for you. After that start the MindsDB server:</p>
 <div class="highlight"><pre><span></span><code>python3 -m mindsdb --api=mysql --config=config.json
 </code></pre></div>
 <p>The arguments sent to MindsDB are:</p>
@@ -1565,9 +1565,9 @@ host(default 127.0.0.1) - The mindsdb server address.</li>
 <li>--config - The path to the configuration file that we have created.
 If everything works as expected you should see the following message:</li>
 </ul>
-<p><img alt="MindsDB Started" src="/assets/tutorials/aitables-postgresql/mindsdb_started.png" /></p>
+<p><img alt="MindsDB Started" src="/docs/assets/tutorials/aitables-postgresql/mindsdb_started.png" /></p>
 <p>Upon successful setup, MindsDB should create a new database called mindsdb.</p>
-<p><img alt="MindsDB Schema" src="/assets/tutorials/aitables-mysql/list_tables.png" /></p>
+<p><img alt="MindsDB Schema" src="/docs/assets/tutorials/aitables-mysql/list_tables.png" /></p>
 <p>In the mindsdb database, two new tables should be created called commands and predictors. The mindsdb.predictors table is the table where MindsDB will keep information about trained models.</p>
 <h3 id="train-new-machine-learning-model">Train new Machine Learning Model</h3>
 <p>Training the machine learning model using MindsDB is quite simple. It can be done by executing the <code>INSERT</code> query inside the mindsdb.predictors table. In our example, we want to predict if the bank's customer left the bank from the bank_churn table, so let’s run the <code>INSERT</code> query as:</p>
@@ -1581,7 +1581,7 @@ If everything works as expected you should see the following message:</li>
 <p>To check that the training successfully finished we can <code>SELECT</code> from mindsdb.predictors table and get the status:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">mindsdb</span><span class="p">.</span><span class="n">predictors</span> <span class="k">WHERE</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;churn_model&#39;</span><span class="p">;</span>
 </code></pre></div>
-<p><img alt="Status" src="/assets/tutorials/aitables-mysql/select_status.png" /></p>
+<p><img alt="Status" src="/docs/assets/tutorials/aitables-mysql/select_status.png" /></p>
 <p>The status complete means that training successfully finished. Now, let’s query the model. 
 The trained model behaves like an AI Table and can be queried as it is a standard database table. To get the prediction we need to execute a <code>SELECT</code> query and in the <code>WHERE</code> clause include the when_data as a JSON string that includes features values such as CreditScore, EstimatedSalary, Gender, Balance etc.</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span>

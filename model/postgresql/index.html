@@ -1417,7 +1417,7 @@ This <code>INSERT</code> query will train a new model called <code>airline_surve
 <p>To check that the training successfully finished you can <code>SELECT</code> from mindsdb.predictors table and get the training status e.g:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">mindsdb</span><span class="p">.</span><span class="n">predictors</span> <span class="k">WHERE</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&lt;model_name&gt;&#39;</span><span class="p">;</span>
 </code></pre></div>
-<p><img alt="Training model status" src="/assets/predictors/postgresql-status.gif" /></p>
+<p><img alt="Training model status" src="/docs/assets/predictors/postgresql-status.gif" /></p>
 <div class="admonition success">
 <p class="admonition-title">That's all <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f389.png" title=":tada:" /> <img alt="🏆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f3c6.png" title=":trophy:" />  <img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/72x72/1f4bb.png" title=":computer:" /></p>
 <p>You have succesfully trained new model from PostgreSQL database. Next step is to get predictions by <a href="/docs/model/query/postgresql/">querying the model</a>.</p>

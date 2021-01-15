@@ -1513,7 +1513,7 @@
 <p>The --date_time_input_format=best_effort enables the datetime parser to parse the basic and all ISO 8601 date and time formats. The pollution_measurement data should be added to the data.pollution_measurement table. To make sure it is successfully added execute SELECT query:</p>
 <div class="highlight"><pre><span></span><code>SELECT * FROM data.pollution_measurement LIMIT 5;‍
 </code></pre></div>
-<p><img alt="SELECT DB" src="/assets/tutorials/aitables-clickhouse/db-select.png" /></p>
+<p><img alt="SELECT DB" src="/docs/assets/tutorials/aitables-clickhouse/db-select.png" /></p>
 <p>We are halfway there! We have successfully installed MindsDB and ClickHouse and have the data saved in the database. Now, we will use MindsDB to connect to ClickHouse and train and query Machine Learning models from the air pollution measurement data. If you don’t want to install ClickHouse locally, ClickHouse Docker image is a good solution.</p>
 <h3 id="connect-mindsdb-to-clickhouse">Connect MindsDB to ClickHouse</h3>
 <p>Let’s start MindsDB:</p>
@@ -1559,14 +1559,14 @@
 <div class="highlight"><pre><span></span><code>USE mindsdb;
 SHOW TABLES;
 </code></pre></div>
-<p><img alt="SHOW TABLES" src="/assets/tutorials/aitables-clickhouse/show-tables.png" /></p>
+<p><img alt="SHOW TABLES" src="/docs/assets/tutorials/aitables-clickhouse/show-tables.png" /></p>
 <p>The default table created inside mindsdb database will be predictors where MindsDB shall keep information about the predictors(ML models), training status, accuracy, 
 target variable and additional training options.</p>
 <div class="highlight"><pre><span></span><code>DESCRIBE TABLE predictors;
 </code></pre></div>
-<p><img alt="Describe TABLE" src="/assets/tutorials/aitables-clickhouse/describe-table.png" /></p>
+<p><img alt="Describe TABLE" src="/docs/assets/tutorials/aitables-clickhouse/describe-table.png" /></p>
 <p>When a user creates a new model or makes a query to any table, the query is sent by MySQL text protocol to MindsDB, where it hits the MindsDB’s API’s responsible for training, analyzing, querying the models.</p>
-<p><img alt="MindsDB and ClickHouse" src="/assets/tutorials/aitables-clickhouse/mdb-ch.png" /></p>
+<p><img alt="MindsDB and ClickHouse" src="/docs/assets/tutorials/aitables-clickhouse/mdb-ch.png" /></p>
 <p>Now, we have everything ready to create a model. We are going to use the data inside the pollution_measurement table to predict the Sulfur Dioxide(SO2) in the air. Creating the model is as simple as writing the INSERT query, where we will provide values for the few required attributes. Before creating the predictor make sure mindsdb database is used:</p>
 <div class="highlight"><pre><span></span><code>use mindsdb;
 
@@ -1584,12 +1584,12 @@ INSERT INTO predictors(name, predict, select_data_query) VALUES (&#39;airq_predi
 <p>To check if the training of the model successfully finished, you can run:</p>
 <div class="highlight"><pre><span></span><code>SELECT * FROM predictors WHERE name=&#39;airq_predictor&#39;‍
 </code></pre></div>
-<p><img alt="MindsDB predictor" src="/assets/tutorials/aitables-clickhouse/select-predictors.png" /></p>
+<p><img alt="MindsDB predictor" src="/docs/assets/tutorials/aitables-clickhouse/select-predictors.png" /></p>
 <p>Status complete means that the model training has finished successfully. Now, let’s create predictive analytics from the data by querying the created predictor. The idea was to predict the value of Sulfur Dioxide in the Seoul air station depending on the different measured parameters as NO2, O3, CO, location etc. </p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">SO2</span> <span class="k">as</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">SO2_confidence</span> <span class="k">as</span> <span class="n">confidence</span> <span class="k">from</span> <span class="n">airq_predictor</span>
 <span class="k">WHERE</span> <span class="n">NO2</span><span class="o">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">005</span> <span class="k">AND</span> <span class="n">CO</span><span class="o">=</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span> <span class="k">AND</span> <span class="n">PM10</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
-<p><img alt="MindsDB query" src="/assets/tutorials/aitables-clickhouse/select-where.png" /></p>
+<p><img alt="MindsDB query" src="/docs/assets/tutorials/aitables-clickhouse/select-where.png" /></p>
 <p>Now you can see that MindsDB predicted that the value of Sulfur Dioxide is 0.00115645 with around 98% confidence.To get additional information about the predicted value and confidence, we should include the explain column. In that case, the MindsDB’s explain functionality apart from confidence can provide additional information such as prediction quality, confidence interval, missing information for improving the prediction etc. We can extend the query and include an additional column for explanation information:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> 
     <span class="n">SO2</span> <span class="k">AS</span> <span class="n">predicted</span><span class="p">,</span>
@@ -1598,7 +1598,7 @@ INSERT INTO predictors(name, predict, select_data_query) VALUES (&#39;airq_predi
 <span class="k">FROM</span> <span class="n">airq_predictor</span>
 <span class="k">WHERE</span> <span class="p">(</span><span class="n">NO2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">005</span><span class="p">)</span> <span class="k">AND</span> <span class="p">(</span><span class="n">CO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span> <span class="k">AND</span> <span class="p">(</span><span class="n">PM10</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
 </code></pre></div>
-<p><img alt="MindsDB query info" src="/assets/tutorials/aitables-clickhouse/select-info.png" /></p>
+<p><img alt="MindsDB query info" src="/docs/assets/tutorials/aitables-clickhouse/select-info.png" /></p>
 <p>Now we get additional information: </p>
 <div class="highlight"><pre><span></span><code>{
     &quot;predicted_value&quot;: 0.001156540079952395,
@@ -1627,7 +1627,7 @@ INSERT INTO predictors(name, predict, select_data_query) VALUES (&#39;airq_predi
 <span class="k">FROM</span> <span class="n">airq_predictor</span>
 <span class="k">WHERE</span> <span class="p">(</span><span class="n">NO2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">005</span><span class="p">)</span> <span class="k">AND</span> <span class="p">(</span><span class="n">CO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span> <span class="k">AND</span> <span class="p">(</span><span class="n">PM10</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="k">AND</span> <span class="p">(</span><span class="o">`</span><span class="n">Station</span> <span class="n">code</span><span class="o">`</span> <span class="o">=</span> <span class="s1">&#39;32&#39;</span><span class="p">)</span> <span class="k">AND</span> <span class="o">`</span><span class="n">PM2</span><span class="p">.</span><span class="mi">5</span><span class="o">`=</span><span class="mi">50</span>
 </code></pre></div>
-<p><img alt="MindsDB query info" src="/assets/tutorials/aitables-clickhouse/select-infoq.png" /></p>
+<p><img alt="MindsDB query info" src="/docs/assets/tutorials/aitables-clickhouse/select-infoq.png" /></p>
 <p>Now the predicted value has changed by adding the feature that MindsDB thought is quite important for better prediction. Additionally we can try and predict the Sulfur Dioxide in the air in some future date. What we can do is just include the Measurement date value inside WHERE clause for the specific date we want to get prediction e.g :</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> 
     <span class="n">SO2</span> <span class="k">AS</span> <span class="n">predicted</span><span class="p">,</span>
@@ -1635,11 +1635,11 @@ INSERT INTO predictors(name, predict, select_data_query) VALUES (&#39;airq_predi
 <span class="k">FROM</span> <span class="n">airq_predictor</span>
 <span class="k">WHERE</span> <span class="p">(</span><span class="n">NO2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">005</span><span class="p">)</span> <span class="k">AND</span> <span class="p">(</span><span class="n">CO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span> <span class="k">AND</span> <span class="p">(</span><span class="n">PM10</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="k">AND</span> <span class="p">(</span><span class="o">`</span><span class="n">Station</span> <span class="n">code</span><span class="o">`</span> <span class="o">=</span> <span class="s1">&#39;32&#39;</span><span class="p">)</span> <span class="k">AND</span> <span class="o">`</span><span class="n">PM2</span><span class="p">.</span><span class="mi">5</span><span class="o">`=</span><span class="mi">50</span> <span class="k">AND</span> <span class="o">`</span><span class="n">Measurement</span> <span class="nb">date</span><span class="o">`=</span><span class="err">’</span><span class="mi">2020</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">03</span> <span class="mi">00</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mi">00</span><span class="err">’</span>
 </code></pre></div>
-<p><img alt="MindsDB query info" src="/assets/tutorials/aitables-clickhouse/select-info1.png" /></p>
+<p><img alt="MindsDB query info" src="/docs/assets/tutorials/aitables-clickhouse/select-info1.png" /></p>
 <p>Or few weeks later as:</p>
-<p><img alt="MindsDB query info" src="/assets/tutorials/aitables-clickhouse/select-info2.png" /></p>
+<p><img alt="MindsDB query info" src="/docs/assets/tutorials/aitables-clickhouse/select-info2.png" /></p>
 <p>At the end, the whole flow was as simple as seeing MindsDB as a database inside ClickHouse and executing queries for INSERT and SELECT directly from it.</p>
-<p><img alt="MindsDB diagram" src="/assets/tutorials/aitables-clickhouse/select-diagram.png" /></p>
+<p><img alt="MindsDB diagram" src="/docs/assets/tutorials/aitables-clickhouse/select-diagram.png" /></p>
 <p>If you follow up to this tutorial with your own data, we are happy to hear about how MindsDB has come in useful to you. Everything that we did in this tutorial will be available through the MindsDB’s Graphical User Interface MindsDB Scout in the next release. That means with a few clicks on MindsDB Scout you can successfully train ML models from your ClickHouse database too.</p>
                 
               

@@ -1552,7 +1552,7 @@ To really sink in this idea, let us expand the concept through an example.</p>
 * The Machine Learning models are exposed as database tables (AI-Tables) that can be queried with the SELECT statements.
 * The ML model generation and training is done through a simple INSERT statement.
 This is possible thanks to MariaDBs CONNECT engine, which enables us to publish tables that live outside MariaDB. Since MindsDB supports the MySQL tcp-ip protocol, AI-Tables can be plugged as if they are external MariaDB tables. The following diagram illustrates this process.</p>
-<p><img alt="MindsDB MariaDB" src="/assets/tutorials/aitables-mariadb/mdb-maria.png" /></p>
+<p><img alt="MindsDB MariaDB" src="/docs/assets/tutorials/aitables-mariadb/mdb-maria.png" /></p>
 <p>The resource intensive Machine Learning tasks like model training happen on a separate MindsDB server instance or in the cloud, so that the Database performance is not affected.</p>
 <p>In the following step-by-step tutorial you will learn how to install a MindsDB server with MariaDB and connect to the data, how to train the model and get predictions using an example dataset. So let’s get started.</p>
 <h3 id="how-to-install-mariadb">How to install MariaDB?</h3>
@@ -1565,7 +1565,7 @@ This is possible thanks to MariaDBs CONNECT engine, which enables us to publish 
 <div class="highlight"><pre><span></span><code>pip show mindsdb
 </code></pre></div>
 <p>And you should be able to see the MindsDB information as name, version, summary, license etc:</p>
-<p><img alt="MindsDB version" src="/assets/tutorials/aitables-mariadb/mdb-ver.png" /></p>
+<p><img alt="MindsDB version" src="/docs/assets/tutorials/aitables-mariadb/mdb-ver.png" /></p>
 <p>That’s all. Let’s set up the required configuration and start MindsDB.</p>
 <h3 id="example-dataset">Example Dataset</h3>
 <p>If you are following this tutorial with your own data, you can skip to the next section. For this example we will use the <a href="https://www.kaggle.com/adityadesai13/used-car-dataset-ford-and-mercedes">Used Car Price</a> dataset from the 100k used cars scraped data. The dataset contains information on price, transmission, mileage, fuel type, road tax, miles per gallon (mpg), and engine size of the used cars in the UK. The idea is to predict the price depending on the above features.</p>
@@ -1606,7 +1606,7 @@ The TERMINATED BY specifies the separator in the data. The escape characters and
 Let’s select the data from used_cars_data table to make sure it is successfully imported:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span>  <span class="n">test</span><span class="p">.</span><span class="n">used_cars_data</span> <span class="k">LIMIT</span> <span class="mi">5</span><span class="p">;</span>
 </code></pre></div>
-<p><img alt="SELECT data" src="/assets/tutorials/aitables-mariadb/select-data.png" /></p>
+<p><img alt="SELECT data" src="/docs/assets/tutorials/aitables-mariadb/select-data.png" /></p>
 <p>The data is inside MariaDB so the next step is to add the required configuration.</p>
 <h3 id="required-configuration">Required Configuration</h3>
 <p>The first thing we need to set up is the required configuration for MindsDB Server. Let’s create a new file called config.json and add the following example:</p>
@@ -1665,7 +1665,7 @@ And the last thing we need to do is to install the CONNECT storage engine plugin
 <li>–config – The path to the config.json file we have created before.
 If MindsDB was successfully started there should be a new database automatically created in MariaDB called mindsdb with two tables (commands and predictors).</li>
 </ul>
-<p><img alt="Database" src="/assets/tutorials/aitables-mariadb/database.png" />
+<p><img alt="Database" src="/docs/assets/tutorials/aitables-mariadb/database.png" />
 In these tables, MindsDB will keep information about the models, model accuracy, training status, target variable that we will predict and additional options used for model training.</p>
 <h3 id="create-new-predictor">Create new predictor</h3>
 <p>The main motto when we first started MindsDB was with one line of code, so now we will try to stick to it and present that in the databases with just one query. The Predictor in MindsDB’s words means Machine Learning model, so creating one could be done with an INSERT statement inside mindsdb.predictors table. Execute the following query:</p>
@@ -1680,13 +1680,13 @@ What this query does is it creates a new model called ‘used_cars_model’ , sp
 <li>training_options (dictionary) – optional value that contains additional training parameters. For a full list of the parameters check the mindsdb.docs.
 You should see the message about the successful execution of the query and if you open up the console, the MindsDB logger shall display messages while training the model.</li>
 </ul>
-<p><img alt="Database" src="/assets/tutorials/aitables-mariadb/training.png" /></p>
+<p><img alt="Database" src="/docs/assets/tutorials/aitables-mariadb/training.png" /></p>
 <p>Training could take some time depending on the data used, columns types, size etc. In our example not more than 2-3 min. To check that model was successfully trained run:</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">mindsdb</span><span class="p">.</span><span class="n">predictors</span> <span class="k">WHERE</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;used_cars_model&#39;</span>
 </code></pre></div>
-<img alt="Database" src="/assets/tutorials/aitables-mariadb/training-run.png" />
-The column status shall be complete and the model accuracy will be saved when the training finishes.</p>
-<p><img alt="Database" src="/assets/tutorials/aitables-mariadb/training-finish.png" /></p>
+<img alt="Database" src="/docs/assets/tutorials/aitables-mariadb/training-run.png" /></p>
+<p>The column status shall be complete and the model accuracy will be saved when the training finishes.</p>
+<p><img alt="Database" src="/docs/assets/tutorials/aitables-mariadb/training-finish.png" /></p>
 <p>The model has been trained successfully. It was quite simple because we didn’t do any hyperparameters tuning or features engineering and leave that out to MindsDB as an AutoML framework to try and fit the best model. With the INSERT query, we just provided labeled data as an input. The next step is to query the trained model with SELECT and get the output from it (predict the price of the car).</p>
 <h3 id="query-the-predictor">Query the predictor</h3>
 <p>To get the prediction from the model is as easy as executing the SELECT statement where we will select the price and price confidence. The main idea is to predict the used car’s price depending on the different features.</p>
@@ -1703,7 +1703,7 @@ The column status shall be complete and the model accuracy will be saved when th
        <span class="k">AND</span> <span class="k">year</span> <span class="o">=</span> <span class="mi">2016</span> 
        <span class="k">AND</span> <span class="n">tax</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> 
 </code></pre></div>
-<p><img alt="Predicted value" src="/assets/tutorials/aitables-mariadb/predicted.png" /></p>
+<p><img alt="Predicted value" src="/docs/assets/tutorials/aitables-mariadb/predicted.png" /></p>
 <p>You should see that MindsDB is quite confident that the car with all of the above characteristics as included in the WHERE clause shall cost around 13,111. To get additional information about the prediction include the explain column in the SELECT e.g:</p>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span> <span class="n">price</span>            <span class="k">AS</span> <span class="n">predicted</span><span class="p">,</span> 
        <span class="n">price_confidence</span> <span class="k">AS</span> <span class="n">confidence</span><span class="p">,</span> 
@@ -1718,7 +1718,7 @@ The column status shall be complete and the model accuracy will be saved when th
        <span class="k">AND</span> <span class="k">year</span> <span class="o">=</span> <span class="mi">2016</span> 
        <span class="k">AND</span> <span class="n">tax</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> 
 </code></pre></div>
-<p><img alt="Predicted info" src="/assets/tutorials/aitables-mariadb/predicted-info.png" /></p>
+<p><img alt="Predicted info" src="/docs/assets/tutorials/aitables-mariadb/predicted-info.png" /></p>
 <p>Note that to beautify the resultFormat you can add command line option format for particular session.
 Now MindsDB will display additional information in the info column as prediction quality, confidence interval, missing information for improving the prediction etc.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1769,7 +1769,7 @@ Now MindsDB will display additional information in the info column as prediction
        <span class="k">AND</span> <span class="k">year</span> <span class="o">=</span> <span class="mi">2014</span> 
        <span class="k">AND</span> <span class="n">tax</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span> 
 </code></pre></div>
-<p><img alt="Predicted value" src="/assets/tutorials/aitables-mariadb/predicted1.png" /></p>
+<p><img alt="Predicted value" src="/docs/assets/tutorials/aitables-mariadb/predicted1.png" /></p>
 <p>Now, MindsDB thinks that this type of car would cost around 12k and price ranges to 23k.</p>
 <p>Let’s sum up what we did and the simple steps we take to get the predictions:</p>
 <ul>
